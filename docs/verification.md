@@ -18,8 +18,12 @@ of a community-node package.
 ## Local results (2026-10-21)
 
 - TypeScript build and catalog integrity checks passed.
-- 26 tests passed, including all 519 SDK routes and n8n's parameter/default
-  resolution for every operation.
+- 42 tests passed, including all 519 SDK routes, n8n's parameter/default
+  resolution for every operation, Fields-mode serialization for every object
+  request body, omitted optional fields, malformed JSON, missing required fields,
+  detailed operation documentation and payload-reference visibility for all 19
+  events (including multiple selections).
+- The new controls have not been visually verified in a running n8n editor.
 - The official `n8n-core@2.44.3` `PackageDirectoryLoader` loaded both nodes and
   the credentials successfully, both from the workspace and from an independently
   installed `.tgz` package. Repeat with:

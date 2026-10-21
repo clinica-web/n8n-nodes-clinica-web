@@ -85,6 +85,42 @@ function readArguments(
     args[p.name] = validateInput(parsed, p.schema, p.name);
   }
   if (op.body) {
+    const mode = context.getNodeParameter("bodyMode", index, "json");
+    if (mode === "fields") {
+      const shape = resolveSchema(op.body.schema);
+      if (
+        shape.type !== "object" ||
+        !Object.keys(shape.properties ?? {}).length
+      )
+        throw new Error("This body supports JSON input only");
+      const optional = context.getNodeParameter(
+        "bodyFields",
+        index,
+        {},
+      ) as Record<string, unknown>;
+      const body: Record<string, unknown> = {};
+      for (const [name, schema] of Object.entries(shape.properties ?? {})) {
+        const required = shape.required?.includes(name);
+        const value = required
+          ? context.getNodeParameter(`body_${name}`, index, undefined)
+          : optional[name];
+        if (value === undefined) {
+          if (required) throw new Error(`Body.${name} is required`);
+          continue;
+        }
+        const field = resolveSchema(schema);
+        body[name] = validateInput(
+          field.type === "object" || field.type === "array"
+            ? parseJson(value, `Body.${name}`)
+            : value,
+          schema,
+          `Body.${name}`,
+        );
+      }
+      args[op.body.name] = body;
+      return args;
+    }
+    if (mode !== "json") throw new Error("Select a valid body input mode");
     const raw = context.getNodeParameter("body", index, "");
     if (raw !== "" && raw !== undefined) {
       // A JSON body can also be a primitive (e.g. a JSON string or enum).

@@ -8,6 +8,7 @@ import {
 } from "n8n-workflow";
 import { credentialName, credentialTest } from "../../shared/client/client";
 import { triggerOptions } from "../../shared/catalog/catalog";
+import { payloadProperties } from "./payload/payload";
 import {
   webhookMethods,
   webhookSecret,
@@ -56,6 +57,7 @@ export class ClinicaWebTrigger implements INodeType {
         default: [0],
         description: "Events that start this workflow",
       },
+      ...payloadProperties(),
     ],
   };
   methods = { credentialTest: { clinicaWebCredentialTest: credentialTest } };
