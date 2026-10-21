@@ -1,0 +1,6117 @@
+{
+  "ERPClinicEditModel": {
+    "required": [
+      "CityId",
+      "LocalNameClinic",
+      "NameClinic"
+    ],
+    "type": "object",
+    "properties": {
+      "CityId": {
+        "type": "integer",
+        "description": "KOATUU city identifier",
+        "format": "int64"
+      },
+      "ExternalId": {
+        "type": "string",
+        "description": "Indentifier in external systems",
+        "format": "uuid",
+        "nullable": true
+      },
+      "Prefix": {
+        "maxLength": 10,
+        "type": "string",
+        "description": "Patient's card number prefix",
+        "nullable": true
+      },
+      "NameClinic": {
+        "maxLength": 100,
+        "type": "string",
+        "description": "Name of clinic\\branch\\organization"
+      },
+      "LocalNameClinic": {
+        "maxLength": 50,
+        "type": "string",
+        "description": "Short version of name - for displaying inside system"
+      },
+      "OnlineNameClinic": {
+        "maxLength": 50,
+        "type": "string",
+        "description": "Version of name for displaying in patient portal systems",
+        "nullable": true
+      },
+      "IsOnline": {
+        "type": "boolean",
+        "description": "Enables patient portal systems for the clinic\\branch\\organization"
+      },
+      "Street": {
+        "maxLength": 100,
+        "type": "string",
+        "nullable": true
+      },
+      "Bookkeeper": {
+        "maxLength": 200,
+        "type": "string",
+        "nullable": true
+      },
+      "Director": {
+        "maxLength": 500,
+        "type": "string",
+        "nullable": true
+      },
+      "Details": {
+        "type": "string",
+        "nullable": true
+      },
+      "EDRPOU": {
+        "maxLength": 20,
+        "type": "string",
+        "nullable": true
+      },
+      "IPN": {
+        "maxLength": 20,
+        "type": "string",
+        "nullable": true
+      },
+      "MFO": {
+        "maxLength": 20,
+        "type": "string",
+        "nullable": true
+      },
+      "RR": {
+        "maxLength": 64,
+        "type": "string",
+        "nullable": true
+      },
+      "NS": {
+        "maxLength": 1000,
+        "type": "string",
+        "nullable": true
+      },
+      "ClinicEmail": {
+        "maxLength": 100,
+        "type": "string",
+        "nullable": true
+      },
+      "PostAddresses": {
+        "maxLength": 1000,
+        "type": "string",
+        "nullable": true
+      },
+      "BankName": {
+        "maxLength": 1000,
+        "type": "string",
+        "nullable": true
+      },
+      "StartTime": {
+        "type": "string",
+        "description": "Only takes into account `time` part",
+        "format": "date-time"
+      },
+      "EndTime": {
+        "type": "string",
+        "description": "Only takes into account `time` part",
+        "format": "date-time"
+      },
+      "Latitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "Longitude": {
+        "type": "number",
+        "format": "double"
+      },
+      "OrderNumber": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Color": {
+        "maxLength": 64,
+        "type": "string",
+        "nullable": true
+      },
+      "BookedPrerecordColor": {
+        "maxLength": 50,
+        "type": "string",
+        "nullable": true
+      },
+      "UseOneBillPerDay": {
+        "type": "boolean"
+      },
+      "IsDebt": {
+        "type": "boolean",
+        "description": "Indicates if debt enabled by default while ordering"
+      },
+      "DayToLock": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "RepeatVisitMounsAge": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "WorkDays": {
+        "type": "integer",
+        "description": "each bit indicates working day (starts from Monday)",
+        "format": "int32"
+      },
+      "Code": {
+        "type": "string",
+        "nullable": true
+      },
+      "MobilePreRecordEmail": {
+        "type": "boolean"
+      },
+      "MobilePreRecordSms": {
+        "type": "boolean"
+      },
+      "UseExtendedDoctorForm": {
+        "type": "boolean"
+      },
+      "IsReturnMaterial": {
+        "type": "boolean"
+      },
+      "IsWriteOffMaterial": {
+        "type": "boolean"
+      },
+      "Logo": {
+        "maxLength": 512,
+        "type": "string",
+        "nullable": true
+      },
+      "IsNotSetDiscoveryInOrderAdding": {
+        "type": "boolean"
+      },
+      "IsFileteringPatientCardLogColumnViewed": {
+        "type": "boolean"
+      },
+      "ClinicMaterialStorageType": {
+        "$ref": "#/components/schemas/ClinicMaterialStorageType"
+      },
+      "ParentId": {
+        "type": "integer",
+        "description": "Internal identifier of paretn organization",
+        "format": "int32",
+        "nullable": true
+      },
+      "ExternalParentId": {
+        "type": "string",
+        "description": "External identifier of paretn organization (should not equal to ExternalId)",
+        "format": "uuid",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ClinicMaterialStorageType": {
+    "enum": [
+      0,
+      1,
+      2
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: AllowAll\n\n- `1`: AllowByDoctorRoom\n\n- `2`: AllowByDoctorRoomAndPreRecord\n\n",
+    "format": "int32"
+  },
+  "UserShiftType": {
+    "enum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: None\n\n- `1`: Approved\n\n- `2`: Rejected\n\n- `3`: Pending\n\n",
+    "format": "int32"
+  },
+  "EditableERPUserShift": {
+    "type": "object",
+    "properties": {
+      "Date": {
+        "type": "string"
+      },
+      "UserId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Hours": {
+        "type": "number",
+        "format": "double"
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "UserPositionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPUserShiftApprove": {
+    "required": [
+      "ApprovingNote"
+    ],
+    "type": "object",
+    "properties": {
+      "ApprovingNote": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPEditableSalaryRule": {
+    "type": "object",
+    "properties": {
+      "Title": {
+        "type": "string",
+        "nullable": true
+      },
+      "Description": {
+        "type": "string",
+        "nullable": true
+      },
+      "EffectiveFrom": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "EffectiveTo": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Active": {
+        "type": "boolean"
+      },
+      "MaxMonthlySalary": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "MinMonthlySalary": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "PercentDiscovery": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "HourlyRate": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "OvertimeHourlyRate": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "NormalDayDurationHours": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "TariffDiscovery": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "UserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "UserPositionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PackageTagId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PackageGroupId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "SalaryExtensions": {
+        "$ref": "#/components/schemas/SalaryExtensions"
+      },
+      "Packages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/BaseDto"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "SalaryExtensions": {
+    "type": "object",
+    "properties": {
+      "Extensions": {
+        "type": "string",
+        "nullable": true
+      },
+      "PercentReferring": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "TariffReferring": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "BaseDto": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "description": "Display name",
+        "nullable": true
+      },
+      "Id": {
+        "type": "integer",
+        "description": "Identifier",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false,
+    "description": "General entity to display name and id"
+  },
+  "GetMatchingRulesRequest": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "EffectiveFrom": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "EffectiveTo": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "UserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PackageTagId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "UserPositionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Packages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/BaseDto"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "DateTimeOffsetOneValueUpdateDto": {
+    "type": "object",
+    "properties": {
+      "Value": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageAnalysisComponentsModel": {
+    "type": "object",
+    "properties": {
+      "AnalysisComponentId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Number": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPEditableUserPosition": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Description": {
+        "type": "string",
+        "nullable": true
+      },
+      "SalaryRuleLimits": {
+        "$ref": "#/components/schemas/SalaryRuleLimits"
+      },
+      "Type": {
+        "$ref": "#/components/schemas/SystemUserPosition"
+      }
+    },
+    "additionalProperties": false
+  },
+  "SalaryRuleLimits": {
+    "type": "object",
+    "properties": {
+      "MaxMonthlySalary": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "MinMonthlySalary": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "PercentDiscovery": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "HourlyRate": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "OvertimeHourlyRate": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "NormalDayDurationHours": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "TariffDiscovery": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "SystemUserPosition": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: None\n\n- `1`: Administrator\n\n- `2`: Doctor\n\n- `3`: LaboratoryAssistant\n\n- `4`: Receptionist\n\n- `5`: Accountant\n\n- `6`: Manager\n\n- `7`: Director\n\n- `8`: Nurse\n\n- `9`: Spetsialist\n\n",
+    "format": "int32"
+  },
+  "ERPPatientPositionEditModel": {
+    "required": [
+      "ClinicId",
+      "Code",
+      "ExternalClinicId",
+      "Name"
+    ],
+    "type": "object",
+    "properties": {
+      "ExternalId": {
+        "type": "string",
+        "format": "uuid",
+        "nullable": true
+      },
+      "Name": {
+        "maxLength": 255,
+        "type": "string"
+      },
+      "Code": {
+        "maxLength": 64,
+        "type": "string"
+      },
+      "ClinicId": {
+        "type": "integer",
+        "description": "Required only when `ExternalClinicId` is not set.",
+        "format": "int32"
+      },
+      "ExternalClinicId": {
+        "type": "string",
+        "description": "Required only when `ClinicId` is not set.",
+        "format": "uuid"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPProtocolDrugCreateRequest": {
+    "required": [
+      "assignmentDetails",
+      "drug"
+    ],
+    "type": "object",
+    "properties": {
+      "drug": {
+        "$ref": "#/components/schemas/DrugDto"
+      },
+      "description": {
+        "type": "string",
+        "nullable": true
+      },
+      "assignmentDetails": {
+        "$ref": "#/components/schemas/ERPMedicationAssignmentDetailsDto"
+      }
+    },
+    "additionalProperties": false
+  },
+  "DrugDto": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "pharmacyId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "name": {
+        "type": "string",
+        "nullable": true
+      },
+      "component": {
+        "type": "string",
+        "nullable": true
+      },
+      "atxCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "dosage": {
+        "type": "string",
+        "nullable": true
+      },
+      "dosageUnit": {
+        "type": "string",
+        "nullable": true
+      },
+      "medicationForm": {
+        "type": "string",
+        "nullable": true
+      },
+      "manufacture": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPMedicationAssignmentDetailsDto": {
+    "required": [
+      "schedule"
+    ],
+    "type": "object",
+    "properties": {
+      "medicationForm": {
+        "type": "string",
+        "description": "MEDICATION_FORM dictionary",
+        "nullable": true
+      },
+      "dosageAmount": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "dosageUnit": {
+        "type": "string",
+        "nullable": true
+      },
+      "mealRelation": {
+        "$ref": "#/components/schemas/MedicationMealRelation"
+      },
+      "schedule": {
+        "$ref": "#/components/schemas/ERPDoctorAssignmentScheduleDto"
+      }
+    },
+    "additionalProperties": false
+  },
+  "MedicationMealRelation": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unspecified\n\n- `1`: BeforeMeal\n\n- `2`: WithMeal\n\n- `3`: AfterMeal\n\n- `4`: Irrelevant\n\n",
+    "format": "int32"
+  },
+  "ERPDoctorAssignmentScheduleDto": {
+    "type": "object",
+    "properties": {
+      "frequency": {
+        "$ref": "#/components/schemas/DoctorAssignmentFrequency"
+      },
+      "weekdays": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DoctorAssignmentWeekday"
+        },
+        "nullable": true
+      },
+      "intervalValue": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "intervalUnit": {
+        "$ref": "#/components/schemas/DoctorAssignmentIntervalUnit"
+      },
+      "cycleActiveDays": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "cyclePauseDays": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "multiplicity": {
+        "$ref": "#/components/schemas/DoctorAssignmentMultiplicity"
+      },
+      "everyHours": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "reminders": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ReminderItem"
+        },
+        "nullable": true
+      },
+      "durationDays": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "DoctorAssignmentFrequency": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unspecified\n\n- `1`: Daily\n\n- `2`: EveryOtherDay\n\n- `3`: SpecificWeekdays\n\n- `4`: RepeatingCycle\n\n- `5`: Interval\n\n- `6`: AsNeeded\n\n",
+    "format": "int32"
+  },
+  "DoctorAssignmentWeekday": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unspecified\n\n- `1`: Monday\n\n- `2`: Tuesday\n\n- `3`: Wednesday\n\n- `4`: Thursday\n\n- `5`: Friday\n\n- `6`: Saturday\n\n- `7`: Sunday\n\n",
+    "format": "int32"
+  },
+  "DoctorAssignmentIntervalUnit": {
+    "enum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unspecified\n\n- `1`: Day\n\n- `2`: Week\n\n- `3`: Month\n\n",
+    "format": "int32"
+  },
+  "DoctorAssignmentMultiplicity": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unspecified\n\n- `1`: Once\n\n- `2`: Twice\n\n- `3`: ThreeTimes\n\n- `4`: MoreThanThree\n\n- `5`: EveryHours\n\n- `6`: RepeatingCycle\n\n- `7`: AsNeeded\n\n",
+    "format": "int32"
+  },
+  "ReminderItem": {
+    "type": "object",
+    "properties": {
+      "time": {
+        "type": "string",
+        "format": "time"
+      },
+      "dosageAmount": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "dosageUnit": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPProtocolDrugUpdateRequest": {
+    "required": [
+      "assignmentDetails"
+    ],
+    "type": "object",
+    "properties": {
+      "drugName": {
+        "type": "string",
+        "description": "New name for a locally created drug. Null keeps the current name; catalog drugs cannot be renamed.",
+        "nullable": true
+      },
+      "description": {
+        "type": "string",
+        "nullable": true
+      },
+      "assignmentDetails": {
+        "$ref": "#/components/schemas/ERPMedicationAssignmentDetailsDto"
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPMonitoringIndicator": {
+    "required": [
+      "Name"
+    ],
+    "type": "object",
+    "properties": {
+      "Name": {
+        "maxLength": 500,
+        "type": "string"
+      },
+      "Unit": {
+        "maxLength": 255,
+        "type": "string",
+        "description": "Optional eHealth/ucum/units dictionary code, used for display only.",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPProtocolMonitoringCreateRequest": {
+    "required": [
+      "MonitoringIndicatorId",
+      "ScheduleDetails"
+    ],
+    "type": "object",
+    "properties": {
+      "ScheduleDetails": {
+        "$ref": "#/components/schemas/ERPMonitoringSchedule"
+      },
+      "MonitoringIndicatorId": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPMonitoringSchedule": {
+    "type": "object",
+    "properties": {
+      "Frequency": {
+        "$ref": "#/components/schemas/DoctorAssignmentFrequency"
+      },
+      "Weekdays": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DoctorAssignmentWeekday"
+        },
+        "nullable": true
+      },
+      "IntervalValue": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "IntervalUnit": {
+        "$ref": "#/components/schemas/DoctorAssignmentIntervalUnit"
+      },
+      "CycleActiveDays": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "CyclePauseDays": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Multiplicity": {
+        "$ref": "#/components/schemas/DoctorAssignmentMultiplicity"
+      },
+      "EveryHours": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Reminders": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPMonitoringReminder"
+        },
+        "nullable": true
+      },
+      "DurationDays": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false,
+    "description": "Reminder settings only; saving these settings does not deliver notifications."
+  },
+  "ERPMonitoringReminder": {
+    "required": [
+      "Time"
+    ],
+    "type": "object",
+    "properties": {
+      "Time": {
+        "type": "string",
+        "description": "Local reminder time, at minute precision.",
+        "format": "time"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPProtocolMonitoringUpdateRequest": {
+    "required": [
+      "ScheduleDetails"
+    ],
+    "type": "object",
+    "properties": {
+      "ScheduleDetails": {
+        "$ref": "#/components/schemas/ERPMonitoringSchedule"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPPrice": {
+    "type": "object",
+    "properties": {
+      "PriceId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContractorPactId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "PriceType": {
+        "$ref": "#/components/schemas/PriceType"
+      },
+      "InWork": {
+        "type": "boolean"
+      },
+      "DateStart": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DateEnd": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Currency": {
+        "$ref": "#/components/schemas/CurrencyType"
+      },
+      "Cashless": {
+        "type": "boolean"
+      },
+      "Cash": {
+        "type": "boolean"
+      },
+      "Online": {
+        "type": "boolean"
+      },
+      "DefaultForClinic": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PriceType": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: None\n\n- `1`: Cash\n\n- `2`: WithoutCash\n\n- `3`: Default\n\n- `4`: DefaultWithoutCash\n\n",
+    "format": "int32"
+  },
+  "CurrencyType": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: UAH\n\n- `1`: USD\n\n- `2`: EUR\n\n- `3`: KZT\n\n- `4`: MDL\n\n- `5`: AZN\n\n",
+    "format": "int32"
+  },
+  "ERPRoomEditable": {
+    "type": "object",
+    "properties": {
+      "ClinicId": {
+        "type": "integer",
+        "description": "Clinic identifier where the room is located",
+        "format": "int32"
+      },
+      "Name": {
+        "type": "string",
+        "description": "Name of the room\n\n- maximum length: 200 characters",
+        "nullable": true
+      },
+      "ShortName": {
+        "type": "string",
+        "description": "Short name of the room\n\n - maximum length: 7 characters",
+        "nullable": true
+      },
+      "GroupId": {
+        "type": "integer",
+        "description": "Room group identifier, can be used to group rooms located in different clinics",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false,
+    "description": "Payload for creating or updating a room"
+  },
+  "EditableERPGroupPackage": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Code": {
+        "type": "string",
+        "nullable": true
+      },
+      "ParentGroupPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PrePrerecordCreateModel": {
+    "type": "object",
+    "properties": {
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "RoomId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "DiscoveryUserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "DateStart": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DateEnd": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "AdditionalPackages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/BasePrePrerecordPackageDto"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "BasePrePrerecordPackageDto": {
+    "type": "object",
+    "properties": {
+      "PackageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PriceId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Count": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContractPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ReferalSalepackPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ContractorPactId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PrePrerecordPatch": {
+    "type": "object",
+    "properties": {
+      "PrerecordId": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "TypeDoctorEditableDto": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "IsOnline": {
+        "type": "boolean"
+      },
+      "CategoryId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPUnitType": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPWard": {
+    "type": "object",
+    "properties": {
+      "Title": {
+        "type": "string",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "WardCategoryId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "HospitalDivisionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Sex": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "PackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "BackgroundColor": {
+        "type": "string",
+        "nullable": true
+      },
+      "Active": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "AvailableFrom": {
+        "type": "string",
+        "format": "time",
+        "nullable": true
+      },
+      "AvailableTo": {
+        "type": "string",
+        "format": "time",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPBed": {
+    "type": "object",
+    "properties": {
+      "Title": {
+        "type": "string",
+        "nullable": true
+      },
+      "WardId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Color": {
+        "type": "string",
+        "nullable": true
+      },
+      "PackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "Active": {
+        "type": "boolean",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPWardCategory": {
+    "type": "object",
+    "properties": {
+      "Title": {
+        "type": "string",
+        "nullable": true
+      },
+      "Index": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Color": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPHospitalDivision": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Type": {
+        "$ref": "#/components/schemas/HospitalDivisionType"
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ResponsibleUserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "Color": {
+        "type": "string",
+        "nullable": true
+      },
+      "AvailableFrom": {
+        "type": "string",
+        "format": "time",
+        "nullable": true
+      },
+      "AvailableTo": {
+        "type": "string",
+        "format": "time",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "HospitalDivisionType": {
+    "enum": [
+      0,
+      1
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Hospitalization\n\n- `1`: Surgery\n\n",
+    "format": "int32"
+  },
+  "EditableERPHospitalizationCategory": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Color": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPHospitalization": {
+    "type": "object",
+    "properties": {
+      "AdmitSource": {
+        "type": "string",
+        "nullable": true
+      },
+      "ReAdmission": {
+        "type": "string",
+        "nullable": true
+      },
+      "DischargeDisposition": {
+        "type": "string",
+        "nullable": true
+      },
+      "DischargeDepartment": {
+        "type": "string",
+        "nullable": true
+      },
+      "PreAdmissionIdentifier": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "BedId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "IsUrgent": {
+        "type": "boolean"
+      },
+      "HospitalizationCategoryId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "CleanlinessClass": {
+        "$ref": "#/components/schemas/CleanlinessClass"
+      },
+      "HospitalizationType": {
+        "$ref": "#/components/schemas/HospitalizationType"
+      },
+      "PackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "HospitalDivisionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "DiscoveryUserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ReferringDoctorId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "AssuranceId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ReferingHospitalId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Start": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "End": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "additionalProperties": false
+  },
+  "CleanlinessClass": {
+    "enum": [
+      0,
+      1
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Clean\n\n- `1`: Dirty\n\n",
+    "format": "int32"
+  },
+  "HospitalizationType": {
+    "enum": [
+      0,
+      1
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Stationary\n\n- `1`: Surgical\n\n",
+    "format": "int32"
+  },
+  "ERPStorageEditable": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "RoomId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "DefaultForClinic": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  },
+  "MedicationCatalogSourceFlags": {
+    "enum": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: None\n\n- `1`: EhealthMedication\n\n- `2`: ReestrCsv\n\n- `4`: Pills\n\n",
+    "format": "int32"
+  },
+  "ERPEditableSalepackExecutor": {
+    "type": "object",
+    "properties": {
+      "UserId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "UserPositionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "RateCoefficient": {
+        "type": "number",
+        "description": "allow set custom rate coefficient for executor\nif executor was involved a bit more or less than others\nthis coefficient will be used to calculate executor's share per this salepack",
+        "format": "double",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPCreateOrderRequest": {
+    "required": [
+      "ClinicId",
+      "MarketingTypeId",
+      "OrderDate",
+      "Packages",
+      "PatientId"
+    ],
+    "type": "object",
+    "properties": {
+      "TemporaryBookingId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "IdempotencyKey": {
+        "type": "string",
+        "description": "Caller-provided key used to correlate this request with an external system.",
+        "nullable": true
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "OrderDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DiscountId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PromotionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PromotionNote": {
+        "type": "string",
+        "nullable": true
+      },
+      "UseCashback": {
+        "type": "boolean"
+      },
+      "ContractorId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "MarketingTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContractId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "IsDebt": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "Packages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPCreateOrderPackageRequest"
+        }
+      }
+    },
+    "additionalProperties": false,
+    "description": "Request for creating one patient order through the ERP API.\nServer-owned values, such as the current user and cash desk, are intentionally excluded."
+  },
+  "ERPCreateOrderPackageRequest": {
+    "required": [
+      "NestedPackages",
+      "PaymentTypeId",
+      "Quantity",
+      "ReferringTypeId"
+    ],
+    "type": "object",
+    "properties": {
+      "PriceId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PrerecordId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Quantity": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContractorAgreementId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ParentPackageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ReferralSalepackPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PaymentTypeId": {
+        "$ref": "#/components/schemas/PaymentTypeId"
+      },
+      "ReferringTypeId": {
+        "$ref": "#/components/schemas/ReferringTypeId"
+      },
+      "AssuranceId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ReferringId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ContractPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PromotionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PromotionNote": {
+        "type": "string",
+        "nullable": true
+      },
+      "UseContractAccount": {
+        "type": "boolean"
+      },
+      "NestedPackages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPCreateOrderPackageItemRequest"
+        }
+      }
+    },
+    "additionalProperties": false,
+    "description": "One priced package in an ERP order request."
+  },
+  "PaymentTypeId": {
+    "enum": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `1`: Assurance\n\n- `2`: Cash\n\n- `3`: Franchise\n\n- `4`: Terminal\n\n- `5`: FranchiseTerminal\n\n- `6`: Account\n\n- `7`: Online\n\n- `8`: Split\n\n",
+    "format": "int32"
+  },
+  "ReferringTypeId": {
+    "enum": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `1`: Self\n\n- `2`: Doctor\n\n- `3`: Assurance\n\n- `4`: Company\n\n- `5`: Contract\n\n",
+    "format": "int32"
+  },
+  "ERPCreateOrderPackageItemRequest": {
+    "required": [
+      "PackageId"
+    ],
+    "type": "object",
+    "properties": {
+      "DiscoveryId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PackageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "InternalNote": {
+        "type": "string",
+        "nullable": true
+      },
+      "ContractPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "AnalysisSampleMaterialId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "IsUrgent": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false,
+    "description": "One service, analysis, or protocol inside an order package."
+  },
+  "EditableERPIcd10": {
+    "required": [
+      "Code",
+      "Description"
+    ],
+    "type": "object",
+    "properties": {
+      "Code": {
+        "maxLength": 20,
+        "type": "string",
+        "description": "ICD10 code value."
+      },
+      "Description": {
+        "maxLength": 255,
+        "type": "string",
+        "description": "ICD10 diagnosis description."
+      }
+    },
+    "additionalProperties": false,
+    "description": "ERP ICD10 payload used for create and update operations."
+  },
+  "EditableERPCity": {
+    "required": [
+      "NameCity",
+      "NameParam"
+    ],
+    "type": "object",
+    "properties": {
+      "NameParam": {
+        "maxLength": 10,
+        "type": "string",
+        "description": "Short city code used by ERP integrations.\nMaximum length: 10 characters."
+      },
+      "NameCity": {
+        "maxLength": 128,
+        "type": "string",
+        "description": "City name.\nMaximum length: 128 characters."
+      },
+      "FullName": {
+        "maxLength": 256,
+        "type": "string",
+        "description": "Full city name.\nMaximum length: 256 characters.",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false,
+    "description": "Payload for creating or updating a city through the ERP API."
+  },
+  "EditableERPBulkCity": {
+    "required": [
+      "NameCity",
+      "NameParam"
+    ],
+    "type": "object",
+    "properties": {
+      "NameParam": {
+        "maxLength": 10,
+        "type": "string",
+        "description": "Short city code used by ERP integrations.\nMaximum length: 10 characters."
+      },
+      "NameCity": {
+        "maxLength": 128,
+        "type": "string",
+        "description": "City name.\nMaximum length: 128 characters."
+      },
+      "FullName": {
+        "maxLength": 256,
+        "type": "string",
+        "description": "Full city name.\nMaximum length: 256 characters.",
+        "nullable": true
+      },
+      "CityId": {
+        "type": "integer",
+        "description": "Unique city identifier.",
+        "format": "int64"
+      }
+    },
+    "additionalProperties": false,
+    "description": "Payload for bulk ERP city updates."
+  },
+  "AssignExternalAnalysisCodeRequest": {
+    "required": [
+      "AnalysisIds",
+      "ClinicId",
+      "Code",
+      "ContainerId",
+      "PatientId"
+    ],
+    "type": "object",
+    "properties": {
+      "Code": {
+        "type": "string"
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContainerId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "AnalysisIds": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "additionalProperties": false,
+    "description": "Request for assigning an external analysis code to analyses."
+  },
+  "EditableERPReferralSalepackPackage": {
+    "required": [
+      "PackageId",
+      "ProtocolId"
+    ],
+    "type": "object",
+    "properties": {
+      "ProtocolId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PackageId": {
+        "type": "integer",
+        "description": "Catalog service identifier. An existing referral cannot be moved to another service.",
+        "format": "int32"
+      },
+      "AssuranceAproveState": {
+        "$ref": "#/components/schemas/AssuranceAproveEnum"
+      },
+      "TargetDate": {
+        "type": "string",
+        "description": "Appointment date, independent of the reminder date.",
+        "format": "date-time",
+        "nullable": true
+      },
+      "RecommendationDetails": {
+        "$ref": "#/components/schemas/ERPServiceRecommendationDetailsDto"
+      }
+    },
+    "additionalProperties": false,
+    "description": "Editable recommendation data. The routed patient/protocol determines the source service."
+  },
+  "AssuranceAproveEnum": {
+    "enum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: NONE\n\n- `1`: REJECTED\n\n- `2`: APROVED\n\n- `3`: PARTIALLY\n\n",
+    "format": "int32"
+  },
+  "ERPServiceRecommendationDetailsDto": {
+    "type": "object",
+    "properties": {
+      "ReminderRule": {
+        "$ref": "#/components/schemas/ServiceReminderRule"
+      },
+      "ReminderDate": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DaysAfterMedication": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "TreatmentDay": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "AdditionalCondition": {
+        "$ref": "#/components/schemas/ServiceAdditionalCondition"
+      },
+      "AdditionalConditionText": {
+        "type": "string",
+        "nullable": true
+      },
+      "Recipient": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ServiceReminderRule": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unspecified\n\n- `1`: SpecificDate\n\n- `2`: DaysAfterMedication\n\n- `3`: NoDate\n\n- `4`: TreatmentDay\n\n",
+    "format": "int32"
+  },
+  "ServiceAdditionalCondition": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unspecified\n\n- `1`: Fasting\n\n- `2`: OneHourBeforeMeal\n\n- `3`: OneHourAfterMeal\n\n- `4`: WithMeal\n\n- `5`: Other\n\n",
+    "format": "int32"
+  },
+  "RemoveReferalSalepackPackageReason": {
+    "enum": [
+      0,
+      1,
+      2
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: CorrectionOfAppointments\n\n- `1`: PatientRefusal\n\n- `2`: AlreadyDone\n\n",
+    "format": "int32"
+  },
+  "EditableERPMaterialLot": {
+    "type": "object",
+    "properties": {
+      "LotCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExpiryDate": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPConsumptionMaterialCreatable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ReferringUserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPConsumptionMaterialEditableItem"
+        },
+        "nullable": true
+      },
+      "ConsumptionSalepackId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPConsumptionMaterialEditableItem": {
+    "type": "object",
+    "properties": {
+      "ConsumptionMaterialItemId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPConsumptionMaterialEditable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ReferringUserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPConsumptionMaterialEditableItem"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPSaleMaterialEditable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PriceId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "TempBookingId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ReferringUserId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPSaleMaterialEditableItem"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPSaleMaterialEditableItem": {
+    "type": "object",
+    "properties": {
+      "SaleMaterialItemId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPGoodsReceiptLookupQuery": {
+    "type": "object",
+    "properties": {
+      "GoodsReceiptIds": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPCreateGoodsReceipt": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContractorProviderId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPCreateGoodsReceiptItem"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPCreateGoodsReceiptItem": {
+    "type": "object",
+    "properties": {
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "VAT": {
+        "type": "number",
+        "format": "double"
+      },
+      "Cost": {
+        "type": "number",
+        "format": "double"
+      },
+      "CostWithVAT": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "LotCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExpiryDate": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPUpdateGoodsReceipt": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContractorProviderId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPUpdateGoodsReceiptItem"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPUpdateGoodsReceiptItem": {
+    "type": "object",
+    "properties": {
+      "GoodsReceiptItemId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "VAT": {
+        "type": "number",
+        "format": "double"
+      },
+      "Cost": {
+        "type": "number",
+        "format": "double"
+      },
+      "CostWithVAT": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "LotCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExpiryDate": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPTransferMaterialEditable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "FromStorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ToStorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "TransferOrderId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPTransferMaterialEditableItem"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPTransferMaterialEditableItem": {
+    "type": "object",
+    "properties": {
+      "TransferMaterialItemId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPTransferOrderEditable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "ToStorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPTransferOrderEditableItem"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPTransferOrderEditableItem": {
+    "type": "object",
+    "properties": {
+      "TransferOrderItemId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPAdjustmentInCreatable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPAdjustmentInItemCreatable"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPAdjustmentInItemCreatable": {
+    "type": "object",
+    "properties": {
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Cost": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "VAT": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "CostWithVAT": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "LotCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExpiryDate": {
+        "type": "string",
+        "nullable": true
+      },
+      "SourceGoodsReceiptItemId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPAdjustmentOutCreatable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPAdjustmentOutItemCreatable"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPAdjustmentOutItemCreatable": {
+    "type": "object",
+    "properties": {
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "SourceGoodsReceiptItemId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPCostAdjustmentCreatable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPCostAdjustmentItemCreatable"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPCostAdjustmentItemCreatable": {
+    "type": "object",
+    "properties": {
+      "SourceGoodsReceiptItemId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Cost": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPWriteOffCreatable": {
+    "type": "object",
+    "properties": {
+      "DocumentDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DocumentNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Goods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ERPWriteOffItemCreatable"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPWriteOffItemCreatable": {
+    "type": "object",
+    "properties": {
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      },
+      "LotId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "SourceGoodsReceiptItemId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "MaterialDocumentType": {
+    "enum": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `1`: Receipt\n\n- `2`: Consumption\n\n- `3`: Sale\n\n- `4`: Transfer\n\n- `5`: AdjustmentIn\n\n- `6`: AdjustmentOut\n\n- `7`: CostAdjustment\n\n- `8`: WriteOff\n\n- `9`: ReturnConsumption\n\n- `10`: ReturnSale\n\n- `11`: ReturnReceipt\n\n- `12`: TransferOrder\n\n",
+    "format": "int32"
+  },
+  "ERPStockBalanceReportQuery": {
+    "type": "object",
+    "properties": {
+      "StorageIds": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      },
+      "NomenclatureIds": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPNomenclature": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Code": {
+        "type": "string",
+        "nullable": true
+      },
+      "VendorCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "MarionId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Form": {
+        "type": "string",
+        "nullable": true
+      },
+      "Number": {
+        "type": "string",
+        "nullable": true
+      },
+      "FormRelease": {
+        "type": "string",
+        "nullable": true
+      },
+      "Category": {
+        "type": "string",
+        "nullable": true
+      },
+      "LicenseOvnerId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "RegСertificate": {
+        "type": "string",
+        "nullable": true
+      },
+      "RegStartDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "RegEndDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "NomenclatureGroupId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "TaxCodeId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "AllowFiscalization": {
+        "type": "boolean"
+      },
+      "Barcode": {
+        "type": "string",
+        "nullable": true
+      },
+      "Uktzed": {
+        "type": "string",
+        "nullable": true
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialManufacturerId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MinimalCountOnStorage": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "ExpiryAlertDays": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPNomenclatureGroups": {
+    "type": "object",
+    "properties": {
+      "NomenclatureGroupId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "ParentId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPNomenclatureAccessGroupEditable": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EditableERPNomenclaturePrice": {
+    "type": "object",
+    "properties": {
+      "Cost": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPNomenclaturePrice": {
+    "type": "object",
+    "properties": {
+      "Cost": {
+        "type": "number",
+        "format": "double"
+      },
+      "PriceId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPMaterialManufacturer": {
+    "type": "object",
+    "properties": {
+      "MaterialManufacturerId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPUnitTypeConversions": {
+    "type": "object",
+    "properties": {
+      "FromUnitId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ToUnitId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Coef": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "additionalProperties": false
+  },
+  "UpdateUserTypeDoctorOrderRequest": {
+    "type": "object",
+    "properties": {
+      "TypeDoctorIds": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPUserCreateInformation": {
+    "type": "object",
+    "properties": {
+      "ExternalId": {
+        "type": "string",
+        "format": "uuid",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PrerecordIndex": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "DefaultInterval": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "OrderIndex": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "DefaultPageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "AllowRemoteLogin": {
+        "type": "boolean"
+      },
+      "PhoneNumberConfirmed": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "AllowLogin": {
+        "type": "boolean"
+      },
+      "Born": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Experience": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "MinimumCost": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Email": {
+        "type": "string",
+        "nullable": true
+      },
+      "FirstTelephone": {
+        "type": "string",
+        "nullable": true
+      },
+      "SecondTelephone": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "UserName": {
+        "type": "string",
+        "nullable": true
+      },
+      "Last": {
+        "type": "string",
+        "nullable": true
+      },
+      "First": {
+        "type": "string",
+        "nullable": true
+      },
+      "Middle": {
+        "type": "string",
+        "nullable": true
+      },
+      "Passport": {
+        "type": "string",
+        "nullable": true
+      },
+      "IdentificationCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "AdditionalInformation": {
+        "type": "string",
+        "nullable": true
+      },
+      "Education": {
+        "type": "string",
+        "nullable": true
+      },
+      "ScientificDegree": {
+        "type": "string",
+        "nullable": true
+      },
+      "QualificationCategory": {
+        "type": "string",
+        "nullable": true
+      },
+      "UserPositionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Photo": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExecutorId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "IsOnline": {
+        "type": "boolean"
+      },
+      "Acls": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      },
+      "UserStorages": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      },
+      "UserEmailSettings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EmailSetting"
+        },
+        "nullable": true
+      },
+      "SubordinatedUsers": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      },
+      "Specializations": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      },
+      "AllowedClinics": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EmailSetting": {
+    "enum": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `1`: SendSchedulerOnEmailAnHourBefore\n\n- `2`: SendSchedulerOnEmailAnDayBefore\n\n- `3`: SendFinanceReport\n\n- `4`: NotifyOnPrerecordToTelegram\n\n",
+    "format": "int32"
+  },
+  "ERPUserInformation": {
+    "type": "object",
+    "properties": {
+      "ExternalId": {
+        "type": "string",
+        "format": "uuid",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PrerecordIndex": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "DefaultInterval": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "OrderIndex": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "DefaultPageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "AllowRemoteLogin": {
+        "type": "boolean"
+      },
+      "PhoneNumberConfirmed": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "AllowLogin": {
+        "type": "boolean"
+      },
+      "Born": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Experience": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "MinimumCost": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Email": {
+        "type": "string",
+        "nullable": true
+      },
+      "FirstTelephone": {
+        "type": "string",
+        "nullable": true
+      },
+      "SecondTelephone": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "UserName": {
+        "type": "string",
+        "nullable": true
+      },
+      "Last": {
+        "type": "string",
+        "nullable": true
+      },
+      "First": {
+        "type": "string",
+        "nullable": true
+      },
+      "Middle": {
+        "type": "string",
+        "nullable": true
+      },
+      "Passport": {
+        "type": "string",
+        "nullable": true
+      },
+      "IdentificationCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "AdditionalInformation": {
+        "type": "string",
+        "nullable": true
+      },
+      "Education": {
+        "type": "string",
+        "nullable": true
+      },
+      "ScientificDegree": {
+        "type": "string",
+        "nullable": true
+      },
+      "QualificationCategory": {
+        "type": "string",
+        "nullable": true
+      },
+      "UserPositionId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Photo": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExecutorId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "IsOnline": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  },
+  "AclEditableDto": {
+    "type": "object",
+    "properties": {
+      "ItemName": {
+        "type": "string",
+        "nullable": true
+      },
+      "PublicName": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageEditableModel": {
+    "type": "object",
+    "properties": {
+      "AnalysisSampleMaterialId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "AnalyzerDeviceId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "BaseTemplate": {
+        "type": "string",
+        "nullable": true
+      },
+      "ContainerId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "DateWhenDefault": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Detail": {
+        "type": "string",
+        "nullable": true
+      },
+      "DetailOnline": {
+        "type": "string",
+        "nullable": true
+      },
+      "DynamicFormGroupId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "EhealthPackageType": {
+        "$ref": "#/components/schemas/EhealthPackageType"
+      },
+      "EnableMedicalExamination": {
+        "type": "boolean"
+      },
+      "EnglishName": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExternalCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "GroupPackageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "IsHavePreparation": {
+        "type": "boolean"
+      },
+      "MozNamePrinting": {
+        "type": "string",
+        "nullable": true
+      },
+      "PercentReferring": {
+        "type": "number",
+        "format": "double"
+      },
+      "Preparation": {
+        "type": "string",
+        "nullable": true
+      },
+      "PrintOldAnalysisResult": {
+        "type": "boolean"
+      },
+      "RoomId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "TagId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "TariffReferring": {
+        "type": "number",
+        "format": "double"
+      },
+      "TaxCodeId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PackageType": {
+        "$ref": "#/components/schemas/PackageType"
+      },
+      "IsUsg": {
+        "type": "boolean"
+      },
+      "TariffDiscovery": {
+        "type": "number",
+        "format": "double"
+      },
+      "PercentDiscovery": {
+        "type": "number",
+        "format": "double"
+      },
+      "ShortName": {
+        "type": "string",
+        "nullable": true
+      },
+      "DefaultPrice": {
+        "type": "number",
+        "format": "double"
+      },
+      "IsOnline": {
+        "type": "boolean"
+      },
+      "NameOnline": {
+        "type": "string",
+        "nullable": true
+      },
+      "OnlinePreparation": {
+        "type": "string",
+        "nullable": true
+      },
+      "AllowPrerecord": {
+        "type": "boolean"
+      },
+      "DefaultInterval": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "AbsoluteTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      },
+      "ActualTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      },
+      "CapacityIntake": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ProductCoefficient": {
+        "type": "number",
+        "format": "double"
+      },
+      "AllowMultiple": {
+        "type": "boolean"
+      },
+      "AlwaysReady": {
+        "type": "boolean"
+      },
+      "DiagnosisRequired": {
+        "type": "boolean"
+      },
+      "Invisible": {
+        "type": "boolean"
+      },
+      "DisallowDiscount": {
+        "type": "boolean"
+      },
+      "DisallowPromotions": {
+        "type": "boolean"
+      },
+      "BlockParallelExecution": {
+        "type": "boolean"
+      },
+      "ValidateNomenclature": {
+        "type": "boolean"
+      },
+      "DateWhenRequired": {
+        "type": "boolean"
+      },
+      "IsNotSetRefferingDoctor": {
+        "type": "boolean"
+      },
+      "IsPrimaryReception": {
+        "type": "boolean"
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Code": {
+        "type": "string",
+        "nullable": true
+      },
+      "Barcode": {
+        "type": "string",
+        "nullable": true
+      },
+      "Uktzed": {
+        "type": "string",
+        "nullable": true
+      },
+      "OrderQuestionaryFormGroupId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "RequiredOrderQuestionary": {
+        "type": "boolean"
+      },
+      "CanBeCito": {
+        "type": "boolean"
+      },
+      "PercentCito": {
+        "type": "number",
+        "format": "double"
+      },
+      "TariffCito": {
+        "type": "number",
+        "format": "double"
+      },
+      "CitoNamePrefix": {
+        "type": "string",
+        "nullable": true
+      },
+      "CitoCodePrefix": {
+        "type": "string",
+        "nullable": true
+      },
+      "CitoAbsoluteTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      },
+      "CitoActualTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "EhealthPackageType": {
+    "enum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Unknown\n\n- `1`: Encounter\n\n- `2`: DiagnosticReport\n\n- `3`: Procedure\n\n",
+    "format": "int32"
+  },
+  "PackageType": {
+    "enum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Group\n\n- `1`: Protocol\n\n- `2`: Analize\n\n- `3`: MaterialSale\n\n",
+    "format": "int32"
+  },
+  "PackageCreateCommand": {
+    "type": "object",
+    "properties": {
+      "Information": {
+        "$ref": "#/components/schemas/PackageInformationModel"
+      },
+      "DefaultConclusionTemplate": {
+        "type": "string",
+        "nullable": true
+      },
+      "SecondaryPackages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SecondaryPackagesModel"
+        },
+        "nullable": true
+      },
+      "Laboratories": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PackageLaboratoriesModel"
+        },
+        "nullable": true
+      },
+      "Nomenclatures": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PackageNomenclatureModel"
+        },
+        "nullable": true
+      },
+      "Prices": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PackagePriceModel"
+        },
+        "nullable": true
+      },
+      "Storages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PackageStoragesModel"
+        },
+        "nullable": true
+      },
+      "TypeDoctors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PackageTypeDoctorsModel"
+        },
+        "nullable": true
+      },
+      "AnalysisComponents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PackageAnalysisComponentsModel"
+        },
+        "nullable": true
+      },
+      "AnalysisSampleMaterials": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/BaseDto"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageInformationModel": {
+    "type": "object",
+    "properties": {
+      "AnalysisSampleMaterialId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "AnalyzerDeviceId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "BaseTemplate": {
+        "type": "string",
+        "nullable": true
+      },
+      "ContainerId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "DateWhenDefault": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Detail": {
+        "type": "string",
+        "nullable": true
+      },
+      "DetailOnline": {
+        "type": "string",
+        "nullable": true
+      },
+      "DynamicFormGroupId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "EhealthPackageType": {
+        "$ref": "#/components/schemas/EhealthPackageType"
+      },
+      "EnableMedicalExamination": {
+        "type": "boolean"
+      },
+      "EnglishName": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExternalCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "GroupPackageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "IsHavePreparation": {
+        "type": "boolean"
+      },
+      "MozNamePrinting": {
+        "type": "string",
+        "nullable": true
+      },
+      "PercentReferring": {
+        "type": "number",
+        "format": "double"
+      },
+      "Preparation": {
+        "type": "string",
+        "nullable": true
+      },
+      "PrintOldAnalysisResult": {
+        "type": "boolean"
+      },
+      "RoomId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "TagId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "TariffReferring": {
+        "type": "number",
+        "format": "double"
+      },
+      "TaxCodeId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PackageType": {
+        "$ref": "#/components/schemas/PackageType"
+      },
+      "IsUsg": {
+        "type": "boolean"
+      },
+      "TariffDiscovery": {
+        "type": "number",
+        "format": "double"
+      },
+      "PercentDiscovery": {
+        "type": "number",
+        "format": "double"
+      },
+      "ShortName": {
+        "type": "string",
+        "nullable": true
+      },
+      "DefaultPrice": {
+        "type": "number",
+        "format": "double"
+      },
+      "IsOnline": {
+        "type": "boolean"
+      },
+      "NameOnline": {
+        "type": "string",
+        "nullable": true
+      },
+      "OnlinePreparation": {
+        "type": "string",
+        "nullable": true
+      },
+      "AllowPrerecord": {
+        "type": "boolean"
+      },
+      "DefaultInterval": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "AbsoluteTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      },
+      "ActualTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      },
+      "CapacityIntake": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ProductCoefficient": {
+        "type": "number",
+        "format": "double"
+      },
+      "AllowMultiple": {
+        "type": "boolean"
+      },
+      "AlwaysReady": {
+        "type": "boolean"
+      },
+      "DiagnosisRequired": {
+        "type": "boolean"
+      },
+      "Invisible": {
+        "type": "boolean"
+      },
+      "DisallowDiscount": {
+        "type": "boolean"
+      },
+      "DisallowPromotions": {
+        "type": "boolean"
+      },
+      "BlockParallelExecution": {
+        "type": "boolean"
+      },
+      "ValidateNomenclature": {
+        "type": "boolean"
+      },
+      "DateWhenRequired": {
+        "type": "boolean"
+      },
+      "IsNotSetRefferingDoctor": {
+        "type": "boolean"
+      },
+      "IsPrimaryReception": {
+        "type": "boolean"
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Code": {
+        "type": "string",
+        "nullable": true
+      },
+      "Barcode": {
+        "type": "string",
+        "nullable": true
+      },
+      "Uktzed": {
+        "type": "string",
+        "nullable": true
+      },
+      "OrderQuestionaryFormGroupId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "RequiredOrderQuestionary": {
+        "type": "boolean"
+      },
+      "CanBeCito": {
+        "type": "boolean"
+      },
+      "PercentCito": {
+        "type": "number",
+        "format": "double"
+      },
+      "TariffCito": {
+        "type": "number",
+        "format": "double"
+      },
+      "CitoNamePrefix": {
+        "type": "string",
+        "nullable": true
+      },
+      "CitoCodePrefix": {
+        "type": "string",
+        "nullable": true
+      },
+      "PackageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ParentGroupPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "CostFromPrice": {
+        "type": "number",
+        "description": "Price from package package price (in case of import\\export)",
+        "format": "double",
+        "nullable": true
+      },
+      "CitoAbsoluteTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      },
+      "CitoActualTimeToReady": {
+        "type": "integer",
+        "format": "int64",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "SecondaryPackagesModel": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Code": {
+        "type": "string",
+        "nullable": true
+      },
+      "DefaultPrice": {
+        "type": "number",
+        "format": "double"
+      },
+      "PackageType": {
+        "$ref": "#/components/schemas/PackageType"
+      },
+      "PackageId": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageLaboratoriesModel": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "LaboratoryPrice": {
+        "type": "number",
+        "format": "double",
+        "nullable": true
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageNomenclatureModel": {
+    "type": "object",
+    "properties": {
+      "NomenclatureId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MaterialUnitTypeId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackagePriceModel": {
+    "type": "object",
+    "properties": {
+      "PriceId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PackagePackagePrices": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PackagePackagePriceModel"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackagePackagePriceModel": {
+    "type": "object",
+    "properties": {
+      "PriceId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "SecondaryPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Cost": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageStoragesModel": {
+    "type": "object",
+    "properties": {
+      "StorageId": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageTypeDoctorsModel": {
+    "type": "object",
+    "properties": {
+      "TypeDoctorId": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPPackageTagEditableDto": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PackageCategoryEditableDto": {
+    "type": "object",
+    "properties": {
+      "NameUa": {
+        "type": "string",
+        "nullable": true
+      },
+      "NameEn": {
+        "type": "string",
+        "nullable": true
+      },
+      "NameRu": {
+        "type": "string",
+        "nullable": true
+      },
+      "NameKz": {
+        "type": "string",
+        "nullable": true
+      },
+      "DescriptionUa": {
+        "type": "string",
+        "nullable": true
+      },
+      "DescriptionEn": {
+        "type": "string",
+        "nullable": true
+      },
+      "DescriptionRu": {
+        "type": "string",
+        "nullable": true
+      },
+      "DescriptionKz": {
+        "type": "string",
+        "nullable": true
+      },
+      "Order": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ParentPackageCategoryId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ReorderPackageCategoryCommad": {
+    "type": "object",
+    "properties": {
+      "PackageCategoryIds": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "UpdatePacakgeCategoryPackageOrderCommad": {
+    "type": "object",
+    "properties": {
+      "Order": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPDepartmentEditModel": {
+    "required": [
+      "ClinicId",
+      "ExternalClinicId",
+      "Name"
+    ],
+    "type": "object",
+    "properties": {
+      "ExternalId": {
+        "type": "string",
+        "description": "Identifier of the department in external system.",
+        "format": "uuid",
+        "nullable": true
+      },
+      "Name": {
+        "maxLength": 255,
+        "type": "string",
+        "description": "name of the department"
+      },
+      "Code": {
+        "maxLength": 64,
+        "type": "string",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "description": "Internal identifier of the clinic\\branch\\organization. \nRequired only when `ExternalClinicId` is not set",
+        "format": "int32"
+      },
+      "ExternalClinicId": {
+        "type": "string",
+        "description": "External identifier of the clinic\\branch\\organization.\nRequired only when `ClinicId` is not set",
+        "format": "uuid"
+      },
+      "Description": {
+        "maxLength": 512,
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPAdministrativeExpenseCategory": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPAdministrativeExpense": {
+    "required": [
+      "ClinicId",
+      "Cost",
+      "CreatedById",
+      "Name",
+      "PaymentTypeId"
+    ],
+    "type": "object",
+    "properties": {
+      "AdministrativeExpenseId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Cost": {
+        "type": "number",
+        "format": "double"
+      },
+      "Name": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "Comment": {
+        "type": "string",
+        "nullable": true
+      },
+      "DeletedReasonComment": {
+        "type": "string",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "CreatedAt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "CreatedById": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "DeletedById": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "DeletedAt": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "PaymentTypeId": {
+        "$ref": "#/components/schemas/PaymentTypeId"
+      },
+      "AdministrativeExpenseCategoryId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPAssurance": {
+    "type": "object",
+    "properties": {
+      "AssuranceId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ContractorId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Number": {
+        "type": "string",
+        "nullable": true
+      },
+      "Specialization": {
+        "type": "string",
+        "nullable": true
+      },
+      "DateModified": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DateEnd": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPContractor": {
+    "type": "object",
+    "properties": {
+      "ContractorId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "CityId": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "PrinterSerialNumber": {
+        "type": "string",
+        "nullable": true
+      },
+      "IsFiskal": {
+        "type": "boolean"
+      },
+      "PrinterModel": {
+        "type": "string",
+        "nullable": true
+      },
+      "Email": {
+        "type": "string",
+        "nullable": true
+      },
+      "NameComp": {
+        "type": "string",
+        "description": "Название компании",
+        "nullable": true
+      },
+      "Street": {
+        "type": "string",
+        "description": "Название улицы",
+        "nullable": true
+      },
+      "Tel1": {
+        "type": "string",
+        "description": "Контактный телефон",
+        "nullable": true
+      },
+      "Tel2": {
+        "type": "string",
+        "description": "Дополнительный телефон",
+        "nullable": true
+      },
+      "Director": {
+        "type": "string",
+        "description": "ФИО директора",
+        "nullable": true
+      },
+      "Details": {
+        "type": "string",
+        "description": "Дополнииельная инфомрация",
+        "nullable": true
+      },
+      "EDRPOU": {
+        "type": "string",
+        "description": "ЄДРПОУ",
+        "nullable": true
+      },
+      "IPN": {
+        "type": "string",
+        "description": "Индивидуальный налоговый номер",
+        "nullable": true
+      },
+      "MFO": {
+        "type": "string",
+        "description": "МФО",
+        "nullable": true
+      },
+      "RR": {
+        "type": "string",
+        "description": "Расчетный счет",
+        "nullable": true
+      },
+      "NS": {
+        "type": "string",
+        "description": "НС",
+        "nullable": true
+      },
+      "BankName": {
+        "type": "string",
+        "description": "Реквизиты банка",
+        "nullable": true
+      },
+      "ContractorType": {
+        "$ref": "#/components/schemas/ContractorType"
+      },
+      "MedicalLicense": {
+        "type": "string",
+        "nullable": true
+      },
+      "MedicalLicenseDate": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "GovernamentRegistration": {
+        "type": "string",
+        "nullable": true
+      },
+      "GovernamentRegistrationDate": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "LicenseSeria": {
+        "type": "string",
+        "nullable": true
+      },
+      "LicenseSeriaDate": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "PrintAttributes": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  },
+  "ContractorType": {
+    "enum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Assurance\n\n- `1`: Company\n\n- `2`: Fop\n\n- `3`: MaterialProvider\n\n",
+    "format": "int32"
+  },
+  "ERPHospitals": {
+    "type": "object",
+    "properties": {
+      "HospitalId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "EDRPOU": {
+        "type": "string",
+        "nullable": true
+      },
+      "CityId": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "ShortName": {
+        "type": "string",
+        "nullable": true
+      },
+      "Street": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "CreateOnlinePrerecordModel": {
+    "required": [
+      "DateEnd",
+      "DateStart",
+      "SchedulerId"
+    ],
+    "type": "object",
+    "properties": {
+      "SchedulerId": {
+        "type": "integer",
+        "description": "Scheduler identifier for recording",
+        "format": "int32"
+      },
+      "Note": {
+        "type": "string",
+        "description": "Additional notes for prerecord",
+        "nullable": true
+      },
+      "OnlinePaymentStatus": {
+        "$ref": "#/components/schemas/PrerecordOnlinePaymentStatus"
+      },
+      "DateStart": {
+        "type": "string",
+        "description": "start of planed appointment",
+        "format": "date-time"
+      },
+      "DateEnd": {
+        "type": "string",
+        "description": "end of planed appointment",
+        "format": "date-time"
+      },
+      "PatientId": {
+        "type": "integer",
+        "description": "Patient identifier for prerecord (optional)\nWhen creatating appointment for family member - should be family member id",
+        "format": "int32",
+        "nullable": true
+      },
+      "Status": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false,
+    "description": "Represents the data model for creating an online prerecord entry."
+  },
+  "PrerecordOnlinePaymentStatus": {
+    "enum": [
+      0,
+      1
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: NotPaid\n\n- `1`: Paid\n\n",
+    "format": "int32"
+  },
+  "CreatePublicPrerecordRequest": {
+    "type": "object",
+    "properties": {
+      "Packages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CreatePublicPrerecordPackageModel"
+        },
+        "nullable": true
+      },
+      "SchedulerId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      },
+      "OnlinePaymentStatus": {
+        "$ref": "#/components/schemas/PrerecordOnlinePaymentStatus"
+      },
+      "DateStart": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DateEnd": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ExternalPatientId": {
+        "type": "string",
+        "format": "uuid",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "CreatePublicPrerecordPackageModel": {
+    "type": "object",
+    "properties": {
+      "PackageId": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "additionalProperties": false
+  },
+  "CreatePublicPatientPrerecordRequest": {
+    "required": [
+      "Patient",
+      "Prerecord"
+    ],
+    "type": "object",
+    "properties": {
+      "Patient": {
+        "$ref": "#/components/schemas/PublicPatientModel"
+      },
+      "Prerecord": {
+        "$ref": "#/components/schemas/CreatePublicPatientPrerecordModel"
+      },
+      "PatientSearchOptions": {
+        "$ref": "#/components/schemas/PatientOperationOptions"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PublicPatientModel": {
+    "required": [
+      "Born",
+      "First",
+      "Last",
+      "LFM"
+    ],
+    "type": "object",
+    "properties": {
+      "LFM": {
+        "type": "string",
+        "description": "Patient's full name (space separated)",
+        "example": "LastName FirstName MiddleName"
+      },
+      "First": {
+        "maxLength": 50,
+        "type": "string",
+        "description": "First name",
+        "example": "First"
+      },
+      "Last": {
+        "maxLength": 50,
+        "type": "string",
+        "description": "Last name",
+        "example": "Last"
+      },
+      "Middle": {
+        "maxLength": 50,
+        "type": "string",
+        "description": "Middle name",
+        "nullable": true,
+        "example": "Middle"
+      },
+      "Born": {
+        "type": "string",
+        "description": "Patient`s date of birth",
+        "format": "date-time"
+      },
+      "Gender": {
+        "type": "string",
+        "description": "Gender of the patient. Allowed values: `male` or `female`",
+        "nullable": true,
+        "example": "male"
+      },
+      "Phone": {
+        "maxLength": 20,
+        "type": "string",
+        "description": "Patient's primary phone number (the same as `TelMob1`)",
+        "nullable": true,
+        "example": "0000000000"
+      },
+      "TelMob1": {
+        "maxLength": 20,
+        "type": "string",
+        "description": "Primary Phone number of the patient",
+        "nullable": true,
+        "example": "0000000000"
+      },
+      "TelMob2": {
+        "maxLength": 20,
+        "type": "string",
+        "description": "Secondary Phone number of the patient",
+        "nullable": true,
+        "example": "0000000000"
+      },
+      "TelHome": {
+        "maxLength": 20,
+        "type": "string",
+        "description": "Patient's home phone number",
+        "nullable": true,
+        "example": "0000000000"
+      },
+      "TelWork": {
+        "maxLength": 20,
+        "type": "string",
+        "description": "Patient's work phone number",
+        "nullable": true,
+        "example": "0000000000"
+      },
+      "Email": {
+        "maxLength": 100,
+        "type": "string",
+        "description": "Patient's email\nshould follow email pattern",
+        "nullable": true,
+        "example": "patient.email@domain.name"
+      },
+      "StreetName": {
+        "maxLength": 255,
+        "type": "string",
+        "description": "Patient's street name",
+        "nullable": true
+      },
+      "StreetNumber": {
+        "maxLength": 10,
+        "type": "string",
+        "description": "Patient's street number",
+        "nullable": true
+      },
+      "Room": {
+        "maxLength": 10,
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "maxLength": 200,
+        "type": "string",
+        "description": "Additional information about patient",
+        "nullable": true
+      },
+      "Barcode": {
+        "type": "string",
+        "nullable": true
+      },
+      "Passport": {
+        "maxLength": 50,
+        "type": "string",
+        "description": "Patient ID card number",
+        "nullable": true
+      },
+      "InternalCardNumber": {
+        "type": "string",
+        "description": "Patient`s internal card number",
+        "nullable": true
+      },
+      "BloodType": {
+        "maxLength": 20,
+        "type": "string",
+        "nullable": true,
+        "example": "IV"
+      },
+      "RhFactor": {
+        "maxLength": 10,
+        "type": "string",
+        "nullable": true
+      },
+      "Weight": {
+        "type": "number",
+        "format": "double"
+      },
+      "Height": {
+        "type": "number",
+        "format": "double"
+      },
+      "BirthCity": {
+        "maxLength": 200,
+        "type": "string",
+        "description": "City of patient birth",
+        "nullable": true,
+        "example": "Kyiv"
+      },
+      "ENG_Last": {
+        "maxLength": 50,
+        "type": "string",
+        "nullable": true
+      },
+      "ENG_Middle": {
+        "maxLength": 50,
+        "type": "string",
+        "nullable": true
+      },
+      "ENG_First": {
+        "maxLength": 50,
+        "type": "string",
+        "nullable": true
+      },
+      "CardNumber": {
+        "maxLength": 20,
+        "type": "string",
+        "description": "Card number of patient in clinic",
+        "nullable": true
+      },
+      "Works": {
+        "maxLength": 100,
+        "type": "string",
+        "description": "Patient`s work place",
+        "nullable": true
+      },
+      "Code": {
+        "maxLength": 50,
+        "type": "string",
+        "description": "Patient identification code\\tax code",
+        "nullable": true
+      },
+      "Photo": {
+        "type": "string",
+        "description": "Patient`s photo url",
+        "nullable": true
+      },
+      "NativeLanguage": {
+        "$ref": "#/components/schemas/NativeLanguageEnum"
+      },
+      "Sex": {
+        "type": "boolean",
+        "description": "Patient`s gender\\sex (Male = true; Female = false)"
+      },
+      "MarketingTypeId": {
+        "type": "integer",
+        "description": "Patient`s marketing type (source of patient)",
+        "format": "int32",
+        "nullable": true
+      },
+      "ReferringDoctorId": {
+        "type": "integer",
+        "description": "Who referred the patient to clinic",
+        "format": "int32",
+        "nullable": true
+      },
+      "CityId": {
+        "type": "integer",
+        "description": "KOATUU city id of the patient",
+        "format": "int64",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "description": "internal identifier of the clinic where the patient was registered or assigned",
+        "format": "int32",
+        "nullable": true
+      },
+      "ContactPatientId": {
+        "type": "integer",
+        "description": "Patient`s contact person (family member)",
+        "format": "int32",
+        "nullable": true
+      },
+      "ExternalId": {
+        "type": "string",
+        "description": "External patient identifier (unique)",
+        "format": "uuid",
+        "nullable": true
+      },
+      "ExternalClinicId": {
+        "type": "string",
+        "description": "external identifier of the clinic where the patient was registered or assigned",
+        "format": "uuid",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false,
+    "description": "Patient's general information\n\n- when `LFM` is empty - `First`, `Last`  names are required and vice versa\n- when `TelMob1` or `TelMob2` is set - they should follow the region format `0XXXXXXXXX` without additioanl symbols"
+  },
+  "NativeLanguageEnum": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: any\n\n- `1`: uk\n\n- `2`: ru\n\n- `3`: en\n\n- `4`: uz\n\n- `5`: kz\n\n- `6`: ro\n\n",
+    "format": "int32"
+  },
+  "CreatePublicPatientPrerecordModel": {
+    "type": "object",
+    "properties": {
+      "Packages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CreatePublicPrerecordPackageModel"
+        },
+        "nullable": true
+      },
+      "UserId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "OnlinePaymentStatus": {
+        "$ref": "#/components/schemas/PrerecordOnlinePaymentStatus"
+      },
+      "DateStart": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "DateEnd": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PatientOperationOptions": {
+    "type": "object",
+    "properties": {
+      "CreateStrategy": {
+        "$ref": "#/components/schemas/PatientCreateStrategy"
+      },
+      "SearchMode": {
+        "$ref": "#/components/schemas/PatientSearchMode"
+      },
+      "MatchMode": {
+        "$ref": "#/components/schemas/MatchMode"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PatientCreateStrategy": {
+    "enum": [
+      0,
+      1,
+      2
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Default\n\n- `1`: GetOrCreate\n\n- `2`: CreateOrUpdate\n\n",
+    "format": "int32"
+  },
+  "PatientSearchMode": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Default\n\n- `1`: Phone\n\n- `2`: Born\n\n- `3`: Whildcard\n\n- `4`: Number\n\n",
+    "format": "int32"
+  },
+  "MatchMode": {
+    "enum": [
+      0,
+      1
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Default\n\n- `1`: Single\n\n",
+    "format": "int32"
+  },
+  "StringOneValueUpdateDto": {
+    "type": "object",
+    "properties": {
+      "Value": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PrerecordOnlinePaymentStatusNullableOneValueUpdateDto": {
+    "type": "object",
+    "properties": {
+      "Value": {
+        "$ref": "#/components/schemas/PrerecordOnlinePaymentStatus"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PrerecordStatusOneValueUpdateDto": {
+    "type": "object",
+    "properties": {
+      "Value": {
+        "$ref": "#/components/schemas/PrerecordStatus"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PrerecordStatus": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: None\n\n- `1`: Recalled\n\n- `2`: DidNotCall\n\n- `3`: Callback\n\n- `4`: Approved\n\n- `5`: Сanceled\n\n- `6`: DocumentsIssued\n\n- `8`: WaitInHoll\n\n- `9`: InProgress\n\n- `10`: SMSSent\n\n- `11`: DidNotAppear\n\n- `12`: Rescheduled\n\n- `13`: Finished\n\n",
+    "format": "int32"
+  },
+  "CreatePublicPatientRequest": {
+    "required": [
+      "Patient"
+    ],
+    "type": "object",
+    "properties": {
+      "Patient": {
+        "$ref": "#/components/schemas/PublicPatientModel"
+      },
+      "Metadata": {
+        "$ref": "#/components/schemas/PublicPatientMetadataModel"
+      },
+      "Verified": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "Options": {
+        "$ref": "#/components/schemas/PatientOperationOptions"
+      }
+    },
+    "additionalProperties": false
+  },
+  "PublicPatientMetadataModel": {
+    "type": "object",
+    "properties": {
+      "ExternalPositionId": {
+        "type": "string",
+        "description": "external identifier of primary position (should not be used) \nuse `Positions` array instead",
+        "format": "uuid",
+        "nullable": true
+      },
+      "PositionId": {
+        "type": "integer",
+        "description": "identifier of primary position (should not be used) \nuse `Positions` array instead",
+        "format": "int32",
+        "nullable": true
+      },
+      "IsDisabled": {
+        "type": "boolean",
+        "description": "indicates whether the patient is disabled"
+      },
+      "ChernobylCategory": {
+        "type": "integer",
+        "description": "indicates whether the patient is a Chernobyl victim",
+        "format": "int32",
+        "nullable": true
+      },
+      "DisabilityStart": {
+        "type": "string",
+        "description": "disability start date",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DisabilityEnd": {
+        "type": "string",
+        "description": "disability end date",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DisabilityGroup": {
+        "maxLength": 64,
+        "type": "string",
+        "description": "disability group name",
+        "nullable": true
+      },
+      "Extensions": {
+        "$ref": "#/components/schemas/PatientMetadataExtensions"
+      },
+      "AnimalBreedId": {
+        "type": "integer",
+        "description": "When customer is `ZOO` - identifier of the animal breed",
+        "format": "int32",
+        "nullable": true
+      },
+      "AnimalKindId": {
+        "type": "integer",
+        "description": "When customer is `ZOO` - identifier of the animal kind",
+        "format": "int32",
+        "nullable": true
+      },
+      "Positions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PatientDepartmentPositionModel"
+        },
+        "description": "Set of patient working positions",
+        "nullable": true
+      },
+      "DepartmentId": {
+        "type": "integer",
+        "description": "Internal identifier of the primary department (should not be used) \nuse `Positions` array instead",
+        "format": "int32",
+        "nullable": true
+      },
+      "ExternalDepartmentId": {
+        "type": "string",
+        "description": "External identifier of the primary department (should not be used) \nuse `Positions` array instead",
+        "format": "uuid",
+        "nullable": true
+      },
+      "UtmInformation": {
+        "$ref": "#/components/schemas/UtmInformation"
+      },
+      "CityName": {
+        "maxLength": 255,
+        "type": "string",
+        "nullable": true
+      },
+      "RegionName": {
+        "maxLength": 255,
+        "type": "string",
+        "nullable": true
+      },
+      "DistrictName": {
+        "maxLength": 255,
+        "type": "string",
+        "nullable": true
+      },
+      "CityType": {
+        "maxLength": 255,
+        "type": "string",
+        "nullable": true
+      },
+      "RegionalLogisticCenterid": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PatientMetadataExtensions": {
+    "type": "object",
+    "properties": {
+      "EhealthIdentity": {
+        "$ref": "#/components/schemas/LocalPatientIdentityMetadata"
+      },
+      "IsHarmfulWorkingConditions": {
+        "type": "boolean"
+      },
+      "IsMainJob": {
+        "type": "boolean"
+      },
+      "Shift": {
+        "type": "string",
+        "nullable": true
+      },
+      "ActualWorkplaceAddress": {
+        "type": "string",
+        "nullable": true
+      },
+      "OutSourceOrganization": {
+        "type": "string",
+        "nullable": true
+      },
+      "IsOutSource": {
+        "type": "boolean"
+      },
+      "IsFired": {
+        "type": "boolean"
+      },
+      "FiringConfirmed": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "FiredAt": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DateOfEmployment": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Department": {
+        "type": "string",
+        "nullable": true
+      },
+      "HasOncologicalDiseases": {
+        "type": "boolean"
+      },
+      "Demobilized": {
+        "type": "boolean",
+        "nullable": true
+      },
+      "MobilizationInformation": {
+        "$ref": "#/components/schemas/MobilizationHistory"
+      },
+      "MobilizationHistiory": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MobilizationHistory"
+        },
+        "nullable": true
+      },
+      "Comment": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "LocalPatientIdentityMetadata": {
+    "type": "object",
+    "properties": {
+      "IsPreperson": {
+        "type": "boolean"
+      },
+      "Age": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "NameKind": {
+        "$ref": "#/components/schemas/LocalPatientNameKind"
+      },
+      "BirthDateKind": {
+        "$ref": "#/components/schemas/LocalPatientBirthDateKind"
+      }
+    },
+    "additionalProperties": false
+  },
+  "LocalPatientNameKind": {
+    "enum": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Manual\n\n- `1`: Structured\n\n- `2`: Short\n\n- `3`: Placeholder\n\n",
+    "format": "int32"
+  },
+  "LocalPatientBirthDateKind": {
+    "enum": [
+      0,
+      1,
+      2
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: Exact\n\n- `1`: Age\n\n- `2`: Unknown\n\n",
+    "format": "int32"
+  },
+  "MobilizationHistory": {
+    "type": "object",
+    "properties": {
+      "DateStart": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DateEnd": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "Reason": {
+        "type": "string",
+        "nullable": true
+      },
+      "MobilizationPoint": {
+        "type": "string",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "PatientDepartmentPositionModel": {
+    "required": [
+      "DepartmentId",
+      "ExternalDepartmentId",
+      "ExternalPositionId",
+      "PositionId"
+    ],
+    "type": "object",
+    "properties": {
+      "IsPrimary": {
+        "type": "boolean",
+        "description": "Indicates if current position is primary \n(if no one position is set - first one is primary)",
+        "nullable": true
+      },
+      "DepartmentId": {
+        "type": "integer",
+        "description": "Internal ERP identifier of the department.\nRequired only when `ExternalDepartmentId` is not set",
+        "format": "int32"
+      },
+      "PositionId": {
+        "type": "integer",
+        "description": "Internal ERP identifier of the position.\nRequired only when `ExternalPositionId` is not set",
+        "format": "int32"
+      },
+      "ExternalDepartmentId": {
+        "type": "string",
+        "description": "External identifier of the department.\nRequired only when `DepartmentId` is not set",
+        "format": "uuid"
+      },
+      "ExternalDepartmentName": {
+        "type": "string",
+        "nullable": true
+      },
+      "ExternalPositionId": {
+        "type": "string",
+        "description": "External identifier of the position\nRequired only when `PositionId` is not set",
+        "format": "uuid"
+      },
+      "ExternalPositionName": {
+        "type": "string",
+        "nullable": true
+      },
+      "Extensions": {
+        "$ref": "#/components/schemas/PatientPositionExtensions"
+      }
+    },
+    "additionalProperties": false,
+    "description": "Describe patient's position information.\nIf item does not have deparment or position identifiers (external or internal), then item will be ignored"
+  },
+  "PatientPositionExtensions": {
+    "type": "object",
+    "properties": {
+      "Shift": {
+        "type": "string",
+        "nullable": true
+      },
+      "OutSourceOrganization": {
+        "type": "string",
+        "nullable": true
+      },
+      "IsOutSource": {
+        "type": "boolean"
+      },
+      "DateOfEmployment": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "IsHarmfulWorkingConditions": {
+        "type": "boolean",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "UtmInformation": {
+    "type": "object",
+    "properties": {
+      "utm_source": {
+        "type": "string",
+        "nullable": true
+      },
+      "utm_medium": {
+        "type": "string",
+        "nullable": true
+      },
+      "utm_campaign": {
+        "type": "string",
+        "nullable": true
+      },
+      "utm_content": {
+        "type": "string",
+        "nullable": true
+      },
+      "utm_term": {
+        "type": "string",
+        "nullable": true
+      },
+      "refferer": {
+        "type": "string",
+        "nullable": true
+      },
+      "last_page": {
+        "type": "string",
+        "nullable": true
+      },
+      "status": {
+        "type": "string",
+        "nullable": true
+      },
+      "record": {
+        "type": "string",
+        "nullable": true
+      },
+      "employee": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "UpdatePublicPatientRequest": {
+    "required": [
+      "Patient"
+    ],
+    "type": "object",
+    "properties": {
+      "Patient": {
+        "$ref": "#/components/schemas/PublicPatientModel"
+      },
+      "Metadata": {
+        "$ref": "#/components/schemas/PublicPatientMetadataModel"
+      },
+      "Verified": {
+        "type": "boolean",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPPatientSickLeaveEditModel": {
+    "required": [
+      "Number"
+    ],
+    "type": "object",
+    "properties": {
+      "ExternalId": {
+        "type": "string",
+        "format": "uuid",
+        "nullable": true
+      },
+      "OrganizationName": {
+        "maxLength": 255,
+        "type": "string",
+        "nullable": true
+      },
+      "Kind": {
+        "maxLength": 255,
+        "type": "string",
+        "description": "Not used for now",
+        "nullable": true
+      },
+      "From": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "To": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "HospitalName": {
+        "maxLength": 255,
+        "type": "string",
+        "description": "Name of medical organization when sickleave issued",
+        "nullable": true
+      },
+      "Diagnosis": {
+        "maxLength": 1024,
+        "type": "string",
+        "nullable": true
+      },
+      "Number": {
+        "maxLength": 64,
+        "type": "string",
+        "description": "Sick leave number"
+      },
+      "Comment": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "WebhookEditModel": {
+    "type": "object",
+    "properties": {
+      "Uri": {
+        "type": "string",
+        "format": "uri",
+        "nullable": true
+      },
+      "Triggers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WebhookTriggers"
+        },
+        "nullable": true
+      },
+      "SecretToken": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "WebhookTriggers": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: PrerecordCreated\n\n- `1`: PrerecordDeleted\n\n- `2`: PrerecordUpdated\n\n- `3`: PatientCreated\n\n- `4`: PatientUpdated\n\n- `5`: OrderAdded\n\n- `6`: OrderUpdated\n\n- `7`: OrderDeleted\n\n- `8`: Fiscalization\n\n- `9`: ProtocolUpdated\n\n- `10`: ReferralSalepackPackageCreated\n\n- `11`: ReferralSalepackPackageDeleted\n\n- `12`: ReferralSalepackPackageUpdated\n\n- `13`: ProtocolDrugCreated\n\n- `14`: ProtocolDrugDeleted\n\n- `15`: ProtocolDrugUpdated\n\n- `16`: ProtocolMonitoringAssignmentCreated\n\n- `17`: ProtocolMonitoringAssignmentDeleted\n\n- `18`: ProtocolMonitoringAssignmentUpdated\n\n",
+    "format": "int32"
+  },
+  "WebhookUpdateEvent": {
+    "required": [
+      "Trigger"
+    ],
+    "type": "object",
+    "properties": {
+      "Trigger": {
+        "$ref": "#/components/schemas/WebhookTriggers"
+      },
+      "Prerecord": {
+        "$ref": "#/components/schemas/OnlinePrerecord"
+      },
+      "Patient": {
+        "$ref": "#/components/schemas/OnlinePatient"
+      },
+      "Order": {
+        "$ref": "#/components/schemas/IOrderMessage"
+      },
+      "ReferralSalepackPackage": {
+        "$ref": "#/components/schemas/ERPReferralSalepackPackage"
+      },
+      "ProtocolDrug": {
+        "$ref": "#/components/schemas/ERPProtocolDrugDto"
+      },
+      "ProtocolMonitoringAssignment": {
+        "$ref": "#/components/schemas/ERPProtocolMonitoringAssignment"
+      },
+      "Protocol": {
+        "$ref": "#/components/schemas/OnlineProtocolInformation"
+      }
+    },
+    "additionalProperties": false
+  },
+  "OnlinePrerecord": {
+    "required": [
+      "DiscoveryId",
+      "DiscoveryLfm",
+      "Patient"
+    ],
+    "type": "object",
+    "properties": {
+      "PrerecordId": {
+        "type": "integer",
+        "description": "Identifier of prerecord",
+        "format": "int32"
+      },
+      "DateStart": {
+        "type": "string",
+        "description": "Prerecord start datetime",
+        "format": "date-time"
+      },
+      "DateEnd": {
+        "type": "string",
+        "description": "Prerecord end datetime",
+        "format": "date-time"
+      },
+      "RoomId": {
+        "type": "integer",
+        "description": "Room of prerecord \n\nThe room where the doctor conducts an examination",
+        "format": "int32"
+      },
+      "RoomGroupId": {
+        "type": "integer",
+        "description": "Room group identifier",
+        "format": "int32",
+        "nullable": true
+      },
+      "RoomName": {
+        "type": "string",
+        "description": "Name of room",
+        "nullable": true
+      },
+      "DiscoveryLfm": {
+        "type": "string",
+        "description": "Name of doctor"
+      },
+      "MarketingTypeId": {
+        "type": "integer",
+        "description": "Marketing type (source of patient)",
+        "format": "int32",
+        "nullable": true
+      },
+      "Note": {
+        "type": "string",
+        "description": "Appointment comment, included in webhook payloads",
+        "nullable": true
+      },
+      "Contractor": {
+        "$ref": "#/components/schemas/BaseDto"
+      },
+      "AssuranceNumber": {
+        "type": "string",
+        "description": "Insurance policy number, included in webhook payloads",
+        "nullable": true
+      },
+      "DiscoveryId": {
+        "type": "integer",
+        "description": "Doctor`s identifier",
+        "format": "int32"
+      },
+      "Referring": {
+        "$ref": "#/components/schemas/BaseDto"
+      },
+      "TypeDoctor": {
+        "$ref": "#/components/schemas/BaseDto"
+      },
+      "ClinicId": {
+        "type": "integer",
+        "description": "Clinic identifier \n\nClinic\\branch where the doctor conducts an examination",
+        "format": "int32"
+      },
+      "ClinicName": {
+        "type": "string",
+        "description": "Name of clinic",
+        "nullable": true
+      },
+      "ExternalClinicId": {
+        "type": "string",
+        "description": "External clinic identifier",
+        "format": "uuid",
+        "nullable": true
+      },
+      "Street": {
+        "type": "string",
+        "description": "Street where clinic located",
+        "nullable": true
+      },
+      "Latitude": {
+        "type": "number",
+        "description": "Latitude where clinic located",
+        "format": "double"
+      },
+      "Longitude": {
+        "type": "number",
+        "description": "Longitude where clinic located",
+        "format": "double"
+      },
+      "PrerecordDeleteReasonId": {
+        "type": "integer",
+        "description": "Reason of prerecord cancellation\n\n- not present if prerecord is not cancelled",
+        "format": "int32",
+        "nullable": true
+      },
+      "Patient": {
+        "$ref": "#/components/schemas/OnlinePatient"
+      },
+      "AdditionalPackages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AdditionalPackagePrerecordOnlineDto"
+        },
+        "description": "List of packages planned for prerecord",
+        "nullable": true
+      },
+      "Del": {
+        "type": "boolean",
+        "description": "indicates whether the prerecord is cancelled"
+      },
+      "CreatedById": {
+        "type": "integer",
+        "description": "User identifier who created the prerecord",
+        "format": "int32"
+      },
+      "WhoDelId": {
+        "type": "integer",
+        "description": "User identifier who deleted\\cancelled the prerecord",
+        "format": "int32",
+        "nullable": true
+      },
+      "OnlinePaymentStatus": {
+        "$ref": "#/components/schemas/PrerecordOnlinePaymentStatus"
+      },
+      "IsDeletedByExternalSystems": {
+        "type": "boolean",
+        "description": "Indicates whether the prerecord is deleted by external systems",
+        "readOnly": true
+      },
+      "DateCreated": {
+        "type": "string",
+        "description": "Date and time when the prerecord was created",
+        "format": "date-time"
+      }
+    },
+    "additionalProperties": false,
+    "description": "Information about prerecord in online context"
+  },
+  "OnlinePatient": {
+    "required": [
+      "Born",
+      "First",
+      "Id",
+      "Last"
+    ],
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": "integer",
+        "description": "Patient`s identifier",
+        "format": "int32"
+      },
+      "Last": {
+        "type": "string",
+        "description": "Patient`s Last name"
+      },
+      "Middle": {
+        "type": "string",
+        "description": "Patient`s middle\\second name",
+        "nullable": true
+      },
+      "First": {
+        "type": "string",
+        "description": "Patient`s first name"
+      },
+      "PhoneNumber": {
+        "type": "string",
+        "description": "Patient`s phone number",
+        "nullable": true
+      },
+      "Email": {
+        "type": "string",
+        "description": "Patient`s email",
+        "nullable": true
+      },
+      "Born": {
+        "type": "string",
+        "description": "Patient`s date of birth",
+        "format": "date-time"
+      },
+      "Sex": {
+        "type": "boolean",
+        "description": "Patient`s gender\\sex"
+      },
+      "CityId": {
+        "type": "integer",
+        "description": "Patient`s city identifier",
+        "format": "int64"
+      },
+      "ClinicName": {
+        "type": "string",
+        "description": "Patient`s clinic name",
+        "nullable": true
+      },
+      "TelegramBotId": {
+        "type": "integer",
+        "description": "telegram bot user\\chat identifier",
+        "format": "int64",
+        "nullable": true
+      },
+      "TelMob1": {
+        "type": "string",
+        "description": "primary Phone number of the patient",
+        "nullable": true
+      },
+      "TelMob2": {
+        "type": "string",
+        "description": "Secondary phone namr of the patient",
+        "nullable": true
+      },
+      "ContactTelMob1": {
+        "type": "string",
+        "description": "Phone number of patient`s contact person",
+        "nullable": true
+      },
+      "ExternalPatientId": {
+        "type": "string",
+        "description": "External patient identifier",
+        "format": "uuid",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false,
+    "description": "Patient information"
+  },
+  "AdditionalPackagePrerecordOnlineDto": {
+    "required": [
+      "Code",
+      "Name",
+      "PackageId",
+      "PackageType"
+    ],
+    "type": "object",
+    "properties": {
+      "PackageId": {
+        "type": "integer",
+        "description": "Package identifier",
+        "format": "int32"
+      },
+      "Name": {
+        "type": "string",
+        "description": "Name of package\\service"
+      },
+      "Code": {
+        "type": "string",
+        "description": "Code of package\\service"
+      },
+      "DefaultInterval": {
+        "type": "integer",
+        "description": "Default pacakge duration (in minutes)",
+        "format": "int32"
+      },
+      "PackageType": {
+        "$ref": "#/components/schemas/PackageType"
+      },
+      "Count": {
+        "type": "integer",
+        "description": "Planned count of services (default is 1)",
+        "format": "int32"
+      },
+      "Cost": {
+        "type": "number",
+        "description": "Approximate cost of 1 package\\service",
+        "format": "double"
+      }
+    },
+    "additionalProperties": false,
+    "description": "Information about planned service\\package for prerecord"
+  },
+  "IOrderMessage": {
+    "required": [
+      "Items",
+      "PatientId"
+    ],
+    "type": "object",
+    "properties": {
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Items": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OrderItem"
+        },
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "OrderItem": {
+    "required": [
+      "BookingId",
+      "ClinicId",
+      "Count",
+      "DateCreated",
+      "Debt",
+      "DebtChanged",
+      "Del",
+      "DiscoveryId",
+      "ExternalSalepackId",
+      "IsFiscal",
+      "PackageId",
+      "PackageType",
+      "ParentPackageId",
+      "PaymentTypeId",
+      "PrerecordId",
+      "PriceDiscountCash",
+      "PriceDiscountWithoutCash",
+      "PriceUndiscountCash",
+      "PriceUndiscountWithoutCash",
+      "ReferringDoctorId",
+      "ReferringIdUpdated",
+      "ReferringTypeIdUpdated",
+      "SalepackId"
+    ],
+    "type": "object",
+    "properties": {
+      "BookingId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PackageId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ParentPackageId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "SalepackId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PackageType": {
+        "$ref": "#/components/schemas/PackageType"
+      },
+      "PaymentTypeId": {
+        "$ref": "#/components/schemas/PaymentTypeId"
+      },
+      "DiscoveryId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PrerecordDiscoveryId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "PrerecordId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ClinicId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Count": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ReferringDoctorId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ReferringDoctorOldId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ExternalSalepackId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "Debt": {
+        "type": "number",
+        "format": "double"
+      },
+      "DebtChanged": {
+        "type": "boolean"
+      },
+      "ReferringIdUpdated": {
+        "type": "boolean"
+      },
+      "ReferringTypeIdUpdated": {
+        "type": "boolean"
+      },
+      "PriceDiscountCash": {
+        "type": "number",
+        "format": "double"
+      },
+      "PriceUndiscountCash": {
+        "type": "number",
+        "format": "double"
+      },
+      "PriceDiscountWithoutCash": {
+        "type": "number",
+        "format": "double"
+      },
+      "PriceUndiscountWithoutCash": {
+        "type": "number",
+        "format": "double"
+      },
+      "IsFiscal": {
+        "type": "boolean"
+      },
+      "Del": {
+        "type": "boolean"
+      },
+      "DateCreated": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "AnalysisId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      },
+      "ProtocolId": {
+        "type": "integer",
+        "format": "int32",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPReferralSalepackPackage": {
+    "required": [
+      "PackageId",
+      "ProtocolId"
+    ],
+    "type": "object",
+    "properties": {
+      "ProtocolId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PackageId": {
+        "type": "integer",
+        "description": "Catalog service identifier. An existing referral cannot be moved to another service.",
+        "format": "int32"
+      },
+      "AssuranceAproveState": {
+        "$ref": "#/components/schemas/AssuranceAproveEnum"
+      },
+      "TargetDate": {
+        "type": "string",
+        "description": "Appointment date, independent of the reminder date.",
+        "format": "date-time",
+        "nullable": true
+      },
+      "RecommendationDetails": {
+        "$ref": "#/components/schemas/ERPServiceRecommendationDetailsDto"
+      },
+      "Id": {
+        "type": "integer",
+        "description": "Referral Salepack Package identifier",
+        "format": "int32"
+      },
+      "PackageCode": {
+        "type": "string",
+        "nullable": true
+      },
+      "PackageName": {
+        "type": "string",
+        "nullable": true
+      },
+      "PackageType": {
+        "$ref": "#/components/schemas/PackageType"
+      },
+      "Status": {
+        "$ref": "#/components/schemas/ReferalSalepackPackageStatus"
+      },
+      "PatientId": {
+        "type": "integer",
+        "description": "Patient identifier",
+        "format": "int32"
+      },
+      "SourceDiscoveryId": {
+        "type": "integer",
+        "description": "Identifier of the doctor/user who issued the referral",
+        "format": "int32"
+      },
+      "SourcePrerecordId": {
+        "type": "integer",
+        "description": "Source prerecord identifier (appointment that led to this referral)",
+        "format": "int32",
+        "nullable": true
+      },
+      "SourceSalepackId": {
+        "type": "integer",
+        "description": "Source ordered service identifier (service during which the referral was issued)",
+        "format": "int32"
+      },
+      "SourceSalepackCreatedAt": {
+        "type": "string",
+        "description": "Source service/package creation date",
+        "format": "date-time"
+      },
+      "CreatedAt": {
+        "type": "string",
+        "description": "Referral creation date",
+        "format": "date-time"
+      },
+      "PrerecordId": {
+        "type": "integer",
+        "description": "Referral-based prerecord identifier\n(appointment created as a result of this referral)",
+        "format": "int32",
+        "nullable": true
+      },
+      "SalepackIds": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "description": "Referral-based service identifiers (created as a result of this referral)",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false,
+    "description": "Full referral, including source information and computed links, for read APIs and webhooks."
+  },
+  "ReferalSalepackPackageStatus": {
+    "enum": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "type": "integer",
+    "description": "Values: \n\n- `0`: None\n\n- `1`: PatientRefusal\n\n- `2`: AlreadyDone\n\n- `3`: RemindedLater\n\n- `4`: NotReachedByPhone\n\n",
+    "format": "int32"
+  },
+  "ERPProtocolDrugDto": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "patientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "protocolId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "del": {
+        "type": "boolean"
+      },
+      "drug": {
+        "$ref": "#/components/schemas/DrugDto"
+      },
+      "description": {
+        "type": "string",
+        "nullable": true
+      },
+      "assignmentDetails": {
+        "$ref": "#/components/schemas/ERPMedicationAssignmentDetailsDto"
+      },
+      "daysCount": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "perDayCount": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "dose": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "ERPProtocolMonitoringAssignment": {
+    "required": [
+      "ScheduleDetails"
+    ],
+    "type": "object",
+    "properties": {
+      "ScheduleDetails": {
+        "$ref": "#/components/schemas/ERPMonitoringSchedule"
+      },
+      "Id": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "ProtocolId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Del": {
+        "type": "boolean"
+      },
+      "MonitoringIndicatorId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "MonitoringIndicatorName": {
+        "type": "string",
+        "nullable": true
+      },
+      "MonitoringIndicatorUnit": {
+        "maxLength": 255,
+        "type": "string",
+        "description": "The indicator's optional eHealth/ucum/units dictionary code, used for display only.",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  },
+  "OnlineProtocolInformation": {
+    "type": "object",
+    "properties": {
+      "ProtocolId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "PatientId": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "Name": {
+        "type": "string",
+        "nullable": true
+      },
+      "Discovery": {
+        "type": "string",
+        "nullable": true
+      },
+      "DiscoveryPhoto": {
+        "type": "string",
+        "nullable": true
+      },
+      "Referring": {
+        "type": "string",
+        "nullable": true
+      },
+      "Diagnosis": {
+        "type": "string",
+        "nullable": true
+      },
+      "Retested": {
+        "type": "string",
+        "format": "date-time",
+        "nullable": true
+      },
+      "DateCreated": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "Clinic": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "additionalProperties": false
+  }
+}

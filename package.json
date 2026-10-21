@@ -1,0 +1,51 @@
+{
+  "name": "n8n-nodes-clinica-web",
+  "version": "0.1.0",
+  "description": "Clinica Web SDK integration for self-hosted n8n",
+  "keywords": [
+    "n8n-community-node-package",
+    "clinica-web"
+  ],
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test tests/*.test.cjs",
+    "catalog:generate": "node scripts/generate-catalog.cjs",
+    "catalog:check": "node scripts/generate-catalog.cjs --check",
+    "format": "prettier --write credentials nodes shared scripts tests package.json tsconfig.json README.md docs",
+    "format:check": "prettier --check credentials nodes shared scripts tests package.json tsconfig.json README.md docs",
+    "verify": "npm run catalog:check && npm run typecheck && npm run format:check && npm test",
+    "prepack": "npm run build"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/ClinicaWebApi/ClinicaWebApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/ClinicaWeb/ClinicaWeb.node.js",
+      "dist/nodes/ClinicaWebTrigger/ClinicaWebTrigger.node.js"
+    ]
+  },
+  "dependencies": {
+    "@clinica-web/sdk": "0.2.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=2.16.0 <3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "n8n-workflow": "2.16.0",
+    "typescript": "5.9.3",
+    "prettier": "3.8.3"
+  }
+}

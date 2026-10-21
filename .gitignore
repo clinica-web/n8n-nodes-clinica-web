@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.reference/
+.runtime/
+.env
+*.tgz
+*.log
+.codebase-memory/
