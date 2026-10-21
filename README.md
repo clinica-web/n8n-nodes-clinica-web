@@ -1,6 +1,6 @@
 # Clinica Web for self-hosted n8n
 
-Community node package backed by `@clinica-web/sdk@0.1.0`. Requires Node.js 22+
+Community node package backed by `@clinica-web/sdk@0.2.0`. Requires Node.js 22+
 and n8n 2.x. This package is for self-hosted installations; it is not a verified
 n8n Cloud integration. The package has not been published to npm.
 
@@ -21,6 +21,9 @@ The `HandleExampleWebhook` operation calls the API's documented example receiver
 use `CreateWebhook` to subscribe or the Trigger for automatic subscriptions.
 
 ## Build and install
+
+Maintainers: see [CI/CD and npm releases](docs/releases.md) for the initial
+publication, Trusted Publisher configuration and automated release process.
 
 ```sh
 npm ci

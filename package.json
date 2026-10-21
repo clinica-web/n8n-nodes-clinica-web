@@ -7,6 +7,14 @@
     "clinica-web"
   ],
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clinica-web/n8n-nodes-clinica-web.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "engines": {
     "node": ">=22"
   },
@@ -21,8 +29,8 @@
     "test": "npm run build && node --test tests/*.test.cjs",
     "catalog:generate": "node scripts/generate-catalog.cjs",
     "catalog:check": "node scripts/generate-catalog.cjs --check",
-    "format": "prettier --write credentials nodes shared scripts tests package.json tsconfig.json README.md docs",
-    "format:check": "prettier --check credentials nodes shared scripts tests package.json tsconfig.json README.md docs",
+    "format": "prettier --write credentials nodes shared scripts tests package.json tsconfig.json README.md docs .github release-please-config.json .release-please-manifest.json",
+    "format:check": "prettier --check credentials nodes shared scripts tests package.json tsconfig.json README.md docs .github release-please-config.json .release-please-manifest.json",
     "verify": "npm run catalog:check && npm run typecheck && npm run format:check && npm test",
     "prepack": "npm run build"
   },
