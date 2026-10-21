@@ -1,5 +1,7 @@
 # Clinica Web for self-hosted n8n
 
+Licensed under the [MIT License](LICENSE). Dependencies retain their own licenses.
+
 Community node package backed by `@clinica-web/sdk@0.2.0`. Requires Node.js 22+
 and n8n 2.x. This package is for self-hosted installations; it is not a verified
 n8n Cloud integration. The package has not been published to npm.
