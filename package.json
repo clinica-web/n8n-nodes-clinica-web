@@ -6,7 +6,7 @@
     "n8n-community-node-package",
     "clinica-web"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clinica-web/n8n-nodes-clinica-web.git"
