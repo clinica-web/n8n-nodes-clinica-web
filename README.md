@@ -75,8 +75,18 @@ optional filters appear under **Optional Parameters**. Omitted optional filters
 stay omitted; explicitly supplied `false`, `0`, empty strings and body `null`
 values retain their meaning. Arrays in query fields accept JSON arrays.
 
-Complex request bodies use **Body (JSON)**. Hover its description for the model
-and top-level fields; the SDK/API uses original, case-sensitive wire names.
+Operations show their summary and detailed API description. For object request
+bodies, choose **Body Input → Fields** to see required fields and **Optional Body
+Fields → Add Body Field**. Types, enum choices and descriptions come from the
+pinned schema. Only added optional fields are sent. Nested objects and arrays
+accept JSON or expressions in their own fields; they are not recursive forms.
+
+**Body Input → JSON** retains **Body (JSON)** for complete objects, explicit nulls
+and additional properties. JSON remains the default so existing workflows keep
+working. Switching modes does not convert or merge values: only the selected
+mode is sent. Array, primitive and unspecified bodies support JSON only.
+Hover the JSON description for the model and top-level fields; the SDK/API uses
+original, case-sensitive wire names.
 Expressions may return a complete object. For example, **Prerecords → Create
 Public Prerecord** accepts the API's `SchedulerId`, `DateStart`, `DateEnd`,
 `PatientId`/`ExternalPatientId`, `Packages`, `Note` and `OnlinePaymentStatus` fields.
@@ -95,6 +105,19 @@ memory for large report results. Narrow report ranges. Numeric inputs must fit
 JavaScript's safe integer range. Dates remain strings, including supplied offsets.
 
 ## Webhook trigger
+
+Enable **Show Payload Reference** to see the payload fields, types, available
+descriptions and a synthetic JSON example for each selected event. Copy an
+**Example JSON** into n8n's **set mock data** to design downstream mappings without
+waiting for delivery. Reference/example controls do not change the subscription
+or emitted payload. Examples are generated from the pinned schema, use placeholder
+values and empty arrays, and are not captured events or valid IDs for API writes.
+They do not automatically populate Output or execute the workflow.
+
+For **Protocol Updated**, the example has `Trigger: 9` and a `Protocol` object
+with fields including `ProtocolId`, `PatientId`, `Name` and `DateCreated`.
+The event-to-payload member mapping was checked against the backend's
+`WebhookProvider` and `WebhookUpdateEvent`; the backend was not modified.
 
 Set public `WEBHOOK_URL` correctly on n8n, select credentials and events, then
 activate/publish the workflow. The Trigger registers its generated callback URL.

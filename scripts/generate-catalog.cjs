@@ -127,7 +127,9 @@ for (const entry of mapping) {
     method: entry.method.toUpperCase(),
     path: entry.path,
     scopes,
-    description: op.summary ?? "",
+    description: [
+      ...new Set([op.summary, op.description].filter(Boolean)),
+    ].join("\n\n"),
     deprecated: op.deprecated ?? false,
     parameters,
     ...(entry.bodyField

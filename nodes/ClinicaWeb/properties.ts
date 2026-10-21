@@ -55,7 +55,7 @@ function bodyHelp(schema: Schema): string {
   const name = schema.$ref?.split("/").pop() ?? shape.type ?? "JSON";
   const fields = Object.entries(shape.properties ?? {}).map(([key, value]) => {
     const field = resolveSchema(value);
-    return `${key}${shape.required?.includes(key) ? " (required)" : ""}: ${field.enum ? field.enum.join(" / ") : (field.type ?? "object")}`;
+    return `${key}${shape.required?.includes(key) ? " (required)" : ""}: ${field.enum ? field.enum.join(" / ") : (field.type ?? "object")}${field.description ? ` — ${field.description}` : ""}`;
   });
   return `${name}. Preserve API field casing. ${fields.join("; ")}. Use an expression to pass an object or array. Server-side business validation applies.`;
 }
@@ -87,7 +87,7 @@ export function nodeProperties(): INodeProperties[] {
         name: label(op.id) + (op.deprecated ? " (Deprecated)" : ""),
         value: op.id,
         action: label(op.id),
-        description: `${op.method} ${op.path}`,
+        description: op.description || `${op.method} ${op.path}`,
       })),
     });
   }
@@ -96,7 +96,7 @@ export function nodeProperties(): INodeProperties[] {
       show: { resource: [op.resource], operation: [op.id] },
     };
     properties.push({
-      displayName: `${op.method} ${op.path}\nScopes: ${op.scopes.join(" ") || "Not declared in Swagger; verify server permissions"}`,
+      displayName: `${op.description ? `${op.description}\n\n` : ""}${op.method} ${op.path}\nScopes: ${op.scopes.join(" ") || "Not declared in Swagger; verify server permissions"}`,
       name: "operationInfo",
       type: "notice",
       default: "",
@@ -127,7 +127,64 @@ export function nodeProperties(): INodeProperties[] {
           inputProperty(p.name, p.schema, p.description),
         ),
       });
-    if (op.body)
+    if (op.body) {
+      const shape = resolveSchema(op.body.schema);
+      const fields = Object.entries(shape.properties ?? {});
+      const supportsFields = shape.type === "object" && fields.length > 0;
+      if (supportsFields) {
+        properties.push({
+          displayName: "Body Input",
+          name: "bodyMode",
+          type: "options",
+          noDataExpression: true,
+          options: [
+            { name: "JSON", value: "json" },
+            { name: "Fields", value: "fields" },
+          ],
+          default: "json",
+          description:
+            "Choose schema fields or pass the entire body as JSON. Switching modes does not convert values. JSON remains the default for existing workflows.",
+          displayOptions,
+        });
+        const fieldDisplay = {
+          show: { ...displayOptions.show, bodyMode: ["fields"] },
+        };
+        for (const [name, schema] of fields.filter(([name]) =>
+          shape.required?.includes(name),
+        )) {
+          properties.push({
+            ...inputProperty(
+              `body_${name}`,
+              schema,
+              resolveSchema(schema).description ?? "",
+              true,
+            ),
+            displayName: label(name),
+            displayOptions: fieldDisplay,
+          });
+        }
+        const optionalFields = fields.filter(
+          ([name]) => !shape.required?.includes(name),
+        );
+        if (optionalFields.length)
+          properties.push({
+            displayName: "Optional Body Fields",
+            name: "bodyFields",
+            type: "collection",
+            placeholder: "Add Body Field",
+            default: {},
+            description:
+              "Only added fields are sent. Nested objects and arrays accept JSON or expressions. Use JSON mode for explicit nulls or additional properties.",
+            displayOptions: fieldDisplay,
+            options: optionalFields.map(([name, schema]) =>
+              inputProperty(
+                name,
+                schema,
+                resolveSchema(schema).description ?? "",
+              ),
+            ),
+          });
+      }
       properties.push({
         displayName: "Body (JSON)",
         name: "body",
@@ -136,8 +193,11 @@ export function nodeProperties(): INodeProperties[] {
         default: "{}",
         required: op.body.required,
         description: bodyHelp(op.body.schema),
-        displayOptions,
+        displayOptions: supportsFields
+          ? { show: { ...displayOptions.show, bodyMode: ["json"] } }
+          : displayOptions,
       });
+    }
   }
   properties.push({
     displayName: "Request Timeout (Seconds)",

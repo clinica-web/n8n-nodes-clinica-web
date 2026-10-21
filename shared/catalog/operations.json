@@ -9,7 +9,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -47,7 +47,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -69,7 +69,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -96,7 +96,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -123,7 +123,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -138,7 +138,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -165,7 +165,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -203,7 +203,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -237,7 +237,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates an adjustment-in document. The document is created with Confirmed status immediately.",
+    "description": "Creates an adjustment-in document. The document is created with Confirmed status immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -259,7 +259,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates an adjustment-out document. The document is created with Confirmed status immediately.",
+    "description": "Creates an adjustment-out document. The document is created with Confirmed status immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -281,7 +281,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a cost adjustment document. The document is created with Confirmed status immediately.",
+    "description": "Creates a cost adjustment document. The document is created with Confirmed status immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -303,7 +303,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a write-off document. The document is created with Confirmed status immediately.",
+    "description": "Creates a write-off document. The document is created with Confirmed status immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -325,7 +325,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -352,7 +352,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns adjustment material documents filtered by date range.",
+    "description": "Returns adjustment material documents filtered by date range.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -390,7 +390,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses"
     ],
-    "description": "CreateAssurance",
+    "description": "CreateAssurance\n\nRequired scope - `gambit:erp:administrative-expenses`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -412,7 +412,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses"
     ],
-    "description": "DeleteAssurance",
+    "description": "DeleteAssurance\n\nRequired scope - `gambit:erp:administrative-expenses`",
     "deprecated": false,
     "parameters": [
       {
@@ -457,7 +457,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses"
     ],
-    "description": "GetAssurance",
+    "description": "GetAssurance\n\nRequired scope - `gambit:erp:administrative-expenses`",
     "deprecated": false,
     "parameters": [
       {
@@ -484,7 +484,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses"
     ],
-    "description": "GetAdministrativeExpense",
+    "description": "GetAdministrativeExpense\n\nRequired scope - `gambit:erp:administrative-expenses`",
     "deprecated": false,
     "parameters": [
       {
@@ -522,7 +522,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses"
     ],
-    "description": "UpdateAdministrativeExpense",
+    "description": "UpdateAdministrativeExpense\n\nRequired scope - `gambit:erp:administrative-expenses`",
     "deprecated": false,
     "parameters": [
       {
@@ -556,7 +556,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses-category"
     ],
-    "description": "CreateAdministrativeExpenseCategory",
+    "description": "CreateAdministrativeExpenseCategory\n\nRequired scope - `gambit:erp:administrative-expenses-category`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -578,7 +578,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses-category"
     ],
-    "description": "DeleteAdministrativeExpenseCategories",
+    "description": "DeleteAdministrativeExpenseCategories\n\nRequired scope - `gambit:erp:administrative-expenses-category`",
     "deprecated": false,
     "parameters": [
       {
@@ -605,7 +605,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses-category"
     ],
-    "description": "GetAdministrativeExpenseCategory",
+    "description": "GetAdministrativeExpenseCategory\n\nRequired scope - `gambit:erp:administrative-expenses-category`",
     "deprecated": false,
     "parameters": [
       {
@@ -632,7 +632,7 @@
     "scopes": [
       "gambit:erp:administrative-expenses-category"
     ],
-    "description": "UpdateAdministrativeExpenseCategory",
+    "description": "UpdateAdministrativeExpenseCategory\n\nRequired scope - `gambit:erp:administrative-expenses-category`",
     "deprecated": false,
     "parameters": [
       {
@@ -666,7 +666,7 @@
     "scopes": [
       "gambit:erp:analysis-codes:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:analysis-codes:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -688,7 +688,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -703,7 +703,7 @@
     "scopes": [
       "gambit:erp:assurances"
     ],
-    "description": "CreateAssurance",
+    "description": "CreateAssurance\n\nRequired scope - `gambit:erp:assurances`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -725,7 +725,7 @@
     "scopes": [
       "gambit:erp:assurances"
     ],
-    "description": "DeleteAssurance",
+    "description": "DeleteAssurance\n\nRequired scope - `gambit:erp:assurances`",
     "deprecated": false,
     "parameters": [
       {
@@ -752,7 +752,7 @@
     "scopes": [
       "gambit:erp:assurances"
     ],
-    "description": "GetAssurance",
+    "description": "GetAssurance\n\nRequired scope - `gambit:erp:assurances`",
     "deprecated": false,
     "parameters": [
       {
@@ -779,7 +779,7 @@
     "scopes": [
       "gambit:erp:assurances"
     ],
-    "description": "UpdateAssurance",
+    "description": "UpdateAssurance\n\nRequired scope - `gambit:erp:assurances`",
     "deprecated": false,
     "parameters": [
       {
@@ -813,7 +813,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -835,7 +835,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -862,7 +862,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -889,7 +889,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -927,7 +927,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -961,7 +961,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "Updates multiple existing cities in a single request.",
+    "description": "Updates multiple existing cities in a single request.\n\nRequired scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -986,7 +986,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "Creates a new city.",
+    "description": "Creates a new city.\n\nRequired scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -1008,7 +1008,7 @@
     "scopes": [
       "gambit:erp:cities"
     ],
-    "description": "Returns cities filtered by name.",
+    "description": "Returns cities filtered by name.\n\nRequired scope - `gambit:erp:cities`",
     "deprecated": false,
     "parameters": [
       {
@@ -1059,7 +1059,7 @@
     "scopes": [
       "gambit:erp:cities"
     ],
-    "description": "Returns city details by identifier.",
+    "description": "Returns city details by identifier.\n\nRequired scope - `gambit:erp:cities`",
     "deprecated": false,
     "parameters": [
       {
@@ -1086,7 +1086,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "Replaces an existing city by identifier.",
+    "description": "Replaces an existing city by identifier.\n\nRequired scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -1120,7 +1120,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -1142,7 +1142,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [
       {
@@ -1169,7 +1169,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [
       {
@@ -1196,7 +1196,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [
       {
@@ -1223,7 +1223,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -1238,7 +1238,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [
       {
@@ -1265,7 +1265,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [
       {
@@ -1292,7 +1292,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [
       {
@@ -1326,7 +1326,7 @@
     "scopes": [
       "gambit:erp:clinics"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:clinics`",
     "deprecated": false,
     "parameters": [
       {
@@ -1360,7 +1360,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Applies a consumption material document by identifier.",
+    "description": "Applies a consumption material document by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -1387,7 +1387,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a consumption material document and optionally applies it immediately.",
+    "description": "Creates a consumption material document and optionally applies it immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -1421,7 +1421,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Deletes a consumption material document by identifier. Only non-applied documents can be deleted.",
+    "description": "Deletes a consumption material document by identifier. Only non-applied documents can be deleted.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -1448,7 +1448,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -1475,7 +1475,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns consumption material documents.",
+    "description": "Returns consumption material documents.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -1513,7 +1513,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns consumption material documents linked to a specific salepack.",
+    "description": "Returns consumption material documents linked to a specific salepack.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -1540,7 +1540,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Recalculates the provisional consumption for a consumption material document by identifier.",
+    "description": "Recalculates the provisional consumption for a consumption material document by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -1567,7 +1567,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Unapplies (reverses) a consumption material document by identifier.",
+    "description": "Unapplies (reverses) a consumption material document by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -1594,7 +1594,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Updates a consumption material document.",
+    "description": "Updates a consumption material document.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -1639,7 +1639,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -1666,7 +1666,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -1681,7 +1681,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -1696,7 +1696,7 @@
     "scopes": [
       "gambit:erp:contractors"
     ],
-    "description": "CreateContractor",
+    "description": "CreateContractor\n\nRequired scope - `gambit:erp:contractors`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -1718,7 +1718,7 @@
     "scopes": [
       "gambit:erp:contractors"
     ],
-    "description": "DeleteContractor",
+    "description": "DeleteContractor\n\nRequired scope - `gambit:erp:contractors`",
     "deprecated": false,
     "parameters": [
       {
@@ -1745,7 +1745,7 @@
     "scopes": [
       "gambit:erp:contractors"
     ],
-    "description": "GetContractor",
+    "description": "GetContractor\n\nRequired scope - `gambit:erp:contractors`",
     "deprecated": false,
     "parameters": [
       {
@@ -1772,7 +1772,7 @@
     "scopes": [
       "gambit:erp:contractors"
     ],
-    "description": "GetAllContractors",
+    "description": "GetAllContractors\n\nRequired scope - `gambit:erp:contractors`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -1787,7 +1787,7 @@
     "scopes": [
       "gambit:erp:contractors"
     ],
-    "description": "UpdateContractor",
+    "description": "UpdateContractor\n\nRequired scope - `gambit:erp:contractors`",
     "deprecated": false,
     "parameters": [
       {
@@ -1821,7 +1821,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -1843,7 +1843,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -1870,7 +1870,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -1897,7 +1897,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -1924,7 +1924,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -1951,7 +1951,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -1966,7 +1966,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -2000,7 +2000,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -2034,7 +2034,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -2060,7 +2060,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -2075,7 +2075,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -2090,7 +2090,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -2126,7 +2126,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -2148,7 +2148,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -2175,7 +2175,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -2201,7 +2201,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -2299,7 +2299,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -2325,7 +2325,7 @@
     "scopes": [
       "gambit:erp:ehealth"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:ehealth`",
     "deprecated": false,
     "parameters": [
       {
@@ -2365,7 +2365,7 @@
     "scopes": [
       "gambit:erp:ehealth"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:ehealth`",
     "deprecated": false,
     "parameters": [
       {
@@ -2405,7 +2405,7 @@
     "scopes": [
       "gambit:erp:ehealth"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:ehealth`",
     "deprecated": false,
     "parameters": [
       {
@@ -2445,7 +2445,7 @@
     "scopes": [
       "gambit:erp:ehealth"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:ehealth`",
     "deprecated": false,
     "parameters": [
       {
@@ -2485,7 +2485,7 @@
     "scopes": [
       "gambit:erp:files"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:files`",
     "deprecated": false,
     "parameters": [
       {
@@ -2511,7 +2511,7 @@
     "scopes": [
       "gambit:erp:files"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:files`",
     "deprecated": false,
     "parameters": [
       {
@@ -2537,7 +2537,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a goods receipt document and optionally applies it immediately.",
+    "description": "Creates a goods receipt document and optionally applies it immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -2571,7 +2571,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Deletes a goods receipt material document by identifier. Only non-applied documents can be deleted.",
+    "description": "Deletes a goods receipt material document by identifier. Only non-applied documents can be deleted.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -2598,7 +2598,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -2625,7 +2625,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -2647,7 +2647,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns goods receipts with filtering and pagination applied.",
+    "description": "Returns goods receipts with filtering and pagination applied.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -2685,7 +2685,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Unapplies (reverses) a goods receipt document by identifier.",
+    "description": "Unapplies (reverses) a goods receipt document by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -2712,7 +2712,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Updates a goods receipt document and optionally applies it immediately.",
+    "description": "Updates a goods receipt document and optionally applies it immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -2757,7 +2757,7 @@
     "scopes": [
       "gambit:erp:group-packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:group-packages`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -2779,7 +2779,7 @@
     "scopes": [
       "gambit:erp:group-packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:group-packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -2806,7 +2806,7 @@
     "scopes": [
       "gambit:erp:group-packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:group-packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -2833,7 +2833,7 @@
     "scopes": [
       "gambit:erp:group-packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:group-packages`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -2848,7 +2848,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -2863,7 +2863,7 @@
     "scopes": [
       "gambit:erp:group-packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:group-packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -2897,7 +2897,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -2919,7 +2919,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -2946,7 +2946,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -2973,7 +2973,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -2988,7 +2988,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3022,7 +3022,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3049,7 +3049,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3101,7 +3101,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -3123,7 +3123,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3150,7 +3150,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -3165,7 +3165,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -3180,7 +3180,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3207,7 +3207,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3241,7 +3241,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -3263,7 +3263,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3290,7 +3290,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3324,7 +3324,7 @@
     "scopes": [
       "gambit:erp:hospitals"
     ],
-    "description": "CreateHospital",
+    "description": "CreateHospital\n\nRequired scope - `gambit:erp:hospitals`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -3346,7 +3346,7 @@
     "scopes": [
       "gambit:erp:hospitals"
     ],
-    "description": "DeleteHospitals",
+    "description": "DeleteHospitals\n\nRequired scope - `gambit:erp:hospitals`",
     "deprecated": false,
     "parameters": [
       {
@@ -3373,7 +3373,7 @@
     "scopes": [
       "gambit:erp:hospitals"
     ],
-    "description": "GetHospital",
+    "description": "GetHospital\n\nRequired scope - `gambit:erp:hospitals`",
     "deprecated": false,
     "parameters": [
       {
@@ -3400,7 +3400,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -3427,7 +3427,7 @@
     "scopes": [
       "gambit:erp:hospitals"
     ],
-    "description": "GetAllHospitals",
+    "description": "GetAllHospitals\n\nRequired scope - `gambit:erp:hospitals`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -3442,7 +3442,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -3468,7 +3468,7 @@
     "scopes": [
       "gambit:erp:hospitals"
     ],
-    "description": "UpdateHospital",
+    "description": "UpdateHospital\n\nRequired scope - `gambit:erp:hospitals`",
     "deprecated": false,
     "parameters": [
       {
@@ -3502,7 +3502,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "Creates a new ICD10 dictionary item.",
+    "description": "Creates a new ICD10 dictionary item.\n\nRequired scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -3524,7 +3524,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "Returns a single ICD10 dictionary item by identifier.",
+    "description": "Returns a single ICD10 dictionary item by identifier.\n\nRequired scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3551,7 +3551,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "Returns ICD10 dictionary items ordered by code.",
+    "description": "Returns ICD10 dictionary items ordered by code.\n\nRequired scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3599,7 +3599,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "Updates an existing ICD10 dictionary item.",
+    "description": "Updates an existing ICD10 dictionary item.\n\nRequired scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3633,7 +3633,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -3648,7 +3648,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3675,7 +3675,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3702,7 +3702,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -3729,7 +3729,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -3744,7 +3744,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -3770,7 +3770,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -3797,7 +3797,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -3812,7 +3812,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -3859,7 +3859,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -3886,7 +3886,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -3913,7 +3913,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -3970,7 +3970,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -3997,7 +3997,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -4019,7 +4019,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4046,7 +4046,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4073,7 +4073,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4100,7 +4100,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4134,7 +4134,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a new material manufacturer.",
+    "description": "Creates a new material manufacturer.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -4156,7 +4156,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Soft-deletes a material manufacturer by identifier.",
+    "description": "Soft-deletes a material manufacturer by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4183,7 +4183,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns a material manufacturer by identifier.",
+    "description": "Returns a material manufacturer by identifier.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4210,7 +4210,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns all active material manufacturers.",
+    "description": "Returns all active material manufacturers.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -4225,7 +4225,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Updates an existing material manufacturer.",
+    "description": "Updates an existing material manufacturer.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4259,7 +4259,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4306,7 +4306,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -4328,7 +4328,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -4355,7 +4355,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -4382,7 +4382,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -4408,7 +4408,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -4442,7 +4442,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4480,7 +4480,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4518,7 +4518,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -4540,7 +4540,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4567,7 +4567,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4594,7 +4594,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4621,7 +4621,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -4636,7 +4636,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4663,7 +4663,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4690,7 +4690,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4728,7 +4728,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4766,7 +4766,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4800,7 +4800,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -4822,7 +4822,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4849,7 +4849,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -4876,7 +4876,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -4891,7 +4891,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4925,7 +4925,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -4947,7 +4947,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -4985,7 +4985,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5023,7 +5023,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5050,7 +5050,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5077,7 +5077,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -5122,7 +5122,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -5144,7 +5144,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -5171,7 +5171,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5198,7 +5198,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5225,7 +5225,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -5240,7 +5240,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -5255,7 +5255,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -5289,7 +5289,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5326,7 +5326,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "Get city information by id",
+    "description": "Get city information by id\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5353,7 +5353,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "Search city by name",
+    "description": "Search city by name\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5379,7 +5379,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "List of clinics\\branches available configured for online recording\\booking",
+    "description": "List of clinics\\branches available configured for online recording\\booking\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5405,7 +5405,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "Returns doctor`s clinics for online recording\\booking",
+    "description": "Returns doctor`s clinics for online recording\\booking\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5432,7 +5432,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "Cancel prerecord appointment by id",
+    "description": "Cancel prerecord appointment by id\n\nRequired scope - `gambit:public:prerecord:write`\n\nToken issued for patient can cancel only own prerecords",
     "deprecated": false,
     "parameters": [
       {
@@ -5459,7 +5459,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "Create prerecord appointment for external patient id",
+    "description": "Create prerecord appointment for external patient id\n\nRequired scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -5493,7 +5493,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Get patient history",
+    "description": "Get patient history\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5520,7 +5520,7 @@
     "scopes": [
       "gambit:public:prerecord:read"
     ],
-    "description": "Returns count of future (active) prerecords for the patient",
+    "description": "Returns count of future (active) prerecords for the patient\n\nRequired scope - `gambit:public:prerecord:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5547,7 +5547,7 @@
     "scopes": [
       "gambit:public:prerecord:read"
     ],
-    "description": "Returns prerecord by id",
+    "description": "Returns prerecord by id\n\nRequired scope - `gambit:public:prerecord:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5585,7 +5585,7 @@
     "scopes": [
       "gambit:public:prerecord:read"
     ],
-    "description": "Returns a list of prerecords for the patient",
+    "description": "Returns a list of prerecords for the patient\n\nRequired scope - `gambit:public:prerecord:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -5622,7 +5622,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "GetPackage",
+    "description": "GetPackage\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5649,7 +5649,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "GetPackageCategories",
+    "description": "GetPackageCategories\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5676,7 +5676,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "GetPriceViewModel",
+    "description": "GetPriceViewModel\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5703,7 +5703,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "GetPackages",
+    "description": "GetPackages\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5740,7 +5740,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "product-promotion-info",
+    "description": "product-promotion-info\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5767,7 +5767,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "GetPromotions",
+    "description": "GetPromotions\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -5782,7 +5782,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "GetReferringDoctorById",
+    "description": "GetReferringDoctorById\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5809,7 +5809,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "GetReferringDoctorsByHospital",
+    "description": "GetReferringDoctorsByHospital\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5836,7 +5836,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "returns room information by id",
+    "description": "returns room information by id\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5863,7 +5863,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "Searching rooms",
+    "description": "Searching rooms\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5922,7 +5922,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "Return specialization by id",
+    "description": "Return specialization by id\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -5949,7 +5949,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "get categories for specializations\n\nSpecialization can have category, but it is not required",
+    "description": "get categories for specializations\n\nSpecialization can have category, but it is not required\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -5964,7 +5964,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "List of specializations available in online portals\n\nif specialization is not configured to be visible in online portals, it will not be returned",
+    "description": "List of specializations available in online portals\n\nif specialization is not configured to be visible in online portals, it will not be returned\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -5979,7 +5979,7 @@
     "scopes": [
       "gambit:erp:salepack:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -6001,7 +6001,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6028,7 +6028,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -6050,7 +6050,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6088,7 +6088,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6115,7 +6115,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6153,7 +6153,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -6168,7 +6168,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6195,7 +6195,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -6210,7 +6210,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6237,7 +6237,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -6259,7 +6259,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6297,7 +6297,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6331,7 +6331,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6376,7 +6376,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a new package nomenclature.",
+    "description": "Creates a new package nomenclature.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -6425,7 +6425,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Deletes a package nomenclature.",
+    "description": "Deletes a package nomenclature.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -6463,7 +6463,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns all package nomenclatures by nomenclature identifier.",
+    "description": "Returns all package nomenclatures by nomenclature identifier.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -6490,7 +6490,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns all package nomenclatures by package identifier.",
+    "description": "Returns all package nomenclatures by package identifier.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -6517,7 +6517,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns all package nomenclatures by salepack identifier.",
+    "description": "Returns all package nomenclatures by salepack identifier.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -6544,7 +6544,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Updates the count of a package nomenclature.",
+    "description": "Updates the count of a package nomenclature.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -6593,7 +6593,7 @@
     "scopes": [
       "gambit:erp:package-price"
     ],
-    "description": "CreatePackagePrice",
+    "description": "CreatePackagePrice\n\nRequired scope - `gambit:erp:package-price`",
     "deprecated": false,
     "parameters": [
       {
@@ -6642,7 +6642,7 @@
     "scopes": [
       "gambit:erp:package-price"
     ],
-    "description": "DeletePackage",
+    "description": "DeletePackage\n\nRequired scope - `gambit:erp:package-price`",
     "deprecated": false,
     "parameters": [
       {
@@ -6680,7 +6680,7 @@
     "scopes": [
       "gambit:erp:package-price"
     ],
-    "description": "GetAllPackagePriceByPackageId",
+    "description": "GetAllPackagePriceByPackageId\n\nRequired scope - `gambit:erp:package-price`",
     "deprecated": false,
     "parameters": [
       {
@@ -6707,7 +6707,7 @@
     "scopes": [
       "gambit:erp:package-price"
     ],
-    "description": "GetAllPackagePriceByPriceId",
+    "description": "GetAllPackagePriceByPriceId\n\nRequired scope - `gambit:erp:package-price`",
     "deprecated": false,
     "parameters": [
       {
@@ -6734,7 +6734,7 @@
     "scopes": [
       "gambit:erp:package-price"
     ],
-    "description": "UpdatePackagePrice",
+    "description": "UpdatePackagePrice\n\nRequired scope - `gambit:erp:package-price`",
     "deprecated": false,
     "parameters": [
       {
@@ -6783,7 +6783,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6831,7 +6831,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6869,7 +6869,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6907,7 +6907,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -6929,7 +6929,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -6951,7 +6951,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -6978,7 +6978,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7005,7 +7005,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7032,7 +7032,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7058,7 +7058,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -7096,7 +7096,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -7111,7 +7111,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7138,7 +7138,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7165,7 +7165,7 @@
     "scopes": [
       "gambit:public:package:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:package:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -7180,7 +7180,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7228,7 +7228,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7266,7 +7266,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7304,7 +7304,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7341,7 +7341,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7375,7 +7375,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7413,7 +7413,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -7435,7 +7435,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7462,7 +7462,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7500,7 +7500,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -7527,7 +7527,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -7554,7 +7554,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -7569,7 +7569,7 @@
     "scopes": [
       "gambit:erp:packages"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:packages`",
     "deprecated": false,
     "parameters": [
       {
@@ -7603,7 +7603,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -7625,7 +7625,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7652,7 +7652,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7679,7 +7679,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -7694,7 +7694,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7721,7 +7721,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7748,7 +7748,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7782,7 +7782,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7816,7 +7816,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7875,7 +7875,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7923,7 +7923,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "Create patient",
+    "description": "Create patient\n\nRequired scope - `gambit:public:patient:write`\n\nApi supports different creation strategies `$.Options.CreateStrategy`:\n\n- `0`: Default - creates patient every time and do not check if patient exists\n- `1`: GetOrCreate - if patient exists, returns it, otherwise creates new one (in this case you can provide minimum required information)\n- `2`: CreateOrUpdate - if patient exists, updates it, otherwise creates new one (in this case you should provide all patient data)\n\n```json\n{\n  \"Patient\": {\n    \"LFM\": \"Last First\",\n    \"Born\": \"2025-01-26\",\n    \"TelMob1\": \"0000000000\"\n  },\n  \"Options\": {\n    \"CreateStrategy\": 1\n  }\n}\n```",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -7945,7 +7945,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -7982,7 +7982,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8016,7 +8016,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8061,7 +8061,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8109,7 +8109,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8157,7 +8157,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8202,7 +8202,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8247,7 +8247,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8296,7 +8296,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "Remove patient by identifier",
+    "description": "Remove patient by identifier\n\nRequired scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8323,7 +8323,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "Remove patient by external identifier",
+    "description": "Remove patient by external identifier\n\nRequired scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8350,7 +8350,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8388,7 +8388,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8426,7 +8426,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8464,7 +8464,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8513,7 +8513,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8562,7 +8562,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8611,7 +8611,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8660,7 +8660,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -8719,7 +8719,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "Generate unique barcode value for patient",
+    "description": "Generate unique barcode value for patient\n\nRequired scope - `gambit:public:patient:write`\n\nThis can be used for different kinds of integration where patient should have unique identifier that fits into barcode",
     "deprecated": false,
     "parameters": [
       {
@@ -8746,7 +8746,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8794,7 +8794,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8831,7 +8831,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8879,7 +8879,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -8927,7 +8927,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "Return all analyses by patient identifier",
+    "description": "Return all analyses by patient identifier\n\nRequired scope - `gambit:public:patient:medical-records:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -8954,7 +8954,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "Return full information about analysis\\laboratory test",
+    "description": "Return full information about analysis\\laboratory test\n\nRequired scope - `gambit:public:patient:medical-records:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -8992,7 +8992,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "Download analysis conclusion",
+    "description": "Download analysis conclusion\n\nRequired scope - `gambit:public:patient:medical-records:read`\n\nresult is gziped text/plain, `ContentEncoding: gzip`",
     "deprecated": false,
     "parameters": [
       {
@@ -9030,7 +9030,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -9068,7 +9068,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "Download analysis recommendation",
+    "description": "Download analysis recommendation\n\nRequired scope - `gambit:public:patient:medical-records:read`\n\nresult is gziped text/plain, `ContentEncoding: gzip`",
     "deprecated": false,
     "parameters": [
       {
@@ -9106,7 +9106,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Get patient full information by external identifier",
+    "description": "Get patient full information by external identifier\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9133,7 +9133,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Get patient full information by identifier",
+    "description": "Get patient full information by identifier\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9160,7 +9160,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:medical-records:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9198,7 +9198,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Get family member by id",
+    "description": "Get family member by id\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9236,7 +9236,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Returns list of family members",
+    "description": "Returns list of family members\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9263,7 +9263,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Get family owmer by family member identifier",
+    "description": "Get family owmer by family member identifier\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9290,7 +9290,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -9317,7 +9317,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Patient history",
+    "description": "Patient history\n\nRequired scope - `gambit:public:patient:read`\n\nreturns history of patient orders and services",
     "deprecated": false,
     "parameters": [
       {
@@ -9344,7 +9344,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -9371,7 +9371,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9398,7 +9398,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "returns all patient positions by identifier",
+    "description": "returns all patient positions by identifier\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9425,7 +9425,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Returns all patient positions by external identifier",
+    "description": "Returns all patient positions by external identifier\n\nRequired scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9452,7 +9452,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9479,7 +9479,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "returns full information about protocol",
+    "description": "returns full information about protocol\n\nRequired scope - `gambit:public:patient:medical-records:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9517,7 +9517,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "Download protocol conclusion",
+    "description": "Download protocol conclusion\n\nRequired scope - `gambit:public:patient:medical-records:read`\n\nresult is gziped text/plain, `ContentEncoding: gzip`",
     "deprecated": false,
     "parameters": [
       {
@@ -9555,7 +9555,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -9593,7 +9593,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -9631,7 +9631,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "Download protocol recommendation",
+    "description": "Download protocol recommendation\n\nRequired scope - `gambit:public:patient:medical-records:read`\n\nresult is gziped text/plain, `ContentEncoding: gzip`",
     "deprecated": false,
     "parameters": [
       {
@@ -9669,7 +9669,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "Get protocol\\examination by patient identifier",
+    "description": "Get protocol\\examination by patient identifier\n\nRequired scope - `gambit:public:patient:medical-records:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9696,7 +9696,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -9723,7 +9723,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9761,7 +9761,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9799,7 +9799,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9826,7 +9826,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9864,7 +9864,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9902,7 +9902,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9951,7 +9951,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -9989,7 +9989,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -10027,7 +10027,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:medical-records:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -10065,7 +10065,7 @@
     "scopes": [
       "gambit:public:patient:medical-records:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:medical-records:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -10103,7 +10103,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "Remove family member by family member identifier",
+    "description": "Remove family member by family member identifier\n\nRequired scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10141,7 +10141,7 @@
     "scopes": [
       "gambit:public:patient:read"
     ],
-    "description": "Api for searching patients",
+    "description": "Api for searching patients\n\nRequired scope - `gambit:public:patient:read`\n\nSearching is case insensitive.\n\n- if value is matching to phone numbers - api will look for patients with this phone number\n- else api will look for patients with this name\n\npagination:\n - first page: `skip=0 take=20`\n - second page: `skip=20 take=20`\n - page x: `skip=(x-1)*20 take=20`",
     "deprecated": false,
     "parameters": [
       {
@@ -10191,7 +10191,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "Update patient by id",
+    "description": "Update patient by id\n\nRequired scope - `gambit:public:patient:write`\n\napi does not support patching, so all information should be provided",
     "deprecated": false,
     "parameters": [
       {
@@ -10225,7 +10225,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10259,7 +10259,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10304,7 +10304,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10349,7 +10349,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10405,7 +10405,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10461,7 +10461,7 @@
     "scopes": [
       "gambit:public:patient:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:patient:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10517,7 +10517,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -10539,7 +10539,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10566,7 +10566,7 @@
     "scopes": [
       "gambit:public:prerecord:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -10618,7 +10618,7 @@
     "scopes": [
       "gambit:public:prerecord:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -10645,7 +10645,7 @@
     "scopes": [
       "gambit:public:prerecord:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -10697,7 +10697,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10731,7 +10731,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10765,7 +10765,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -10787,7 +10787,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -10809,7 +10809,7 @@
     "scopes": [
       "gambit:public:prerecord:delete"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:delete`",
     "deprecated": false,
     "parameters": [
       {
@@ -10836,7 +10836,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -10863,7 +10863,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -10878,7 +10878,7 @@
     "scopes": [
       "gambit:public:prerecord:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -10930,7 +10930,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10964,7 +10964,7 @@
     "scopes": [
       "gambit:public:prerecord:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:prerecord:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -10998,7 +10998,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11036,7 +11036,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -11058,7 +11058,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11085,7 +11085,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11123,7 +11123,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "Returns list of prices for online recording\\booking",
+    "description": "Returns list of prices for online recording\\booking\n\nRequired scope - `gambit:static_data`",
     "deprecated": true,
     "parameters": [
       {
@@ -11150,7 +11150,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11177,7 +11177,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11204,7 +11204,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11231,7 +11231,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11258,7 +11258,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -11273,7 +11273,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11300,7 +11300,7 @@
     "scopes": [
       "gambit:erp:prices"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:prices`",
     "deprecated": false,
     "parameters": [
       {
@@ -11334,7 +11334,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -11361,7 +11361,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -11388,7 +11388,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -11403,7 +11403,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -11452,7 +11452,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -11501,7 +11501,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -11539,7 +11539,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -11598,7 +11598,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -11647,7 +11647,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -11696,7 +11696,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -11711,7 +11711,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -11726,7 +11726,7 @@
     "scopes": [
       "gambit:erp:rooms"
     ],
-    "description": "Create new room",
+    "description": "Create new room\n\nRequired scope - `gambit:erp:rooms`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -11748,7 +11748,7 @@
     "scopes": [
       "gambit:erp:rooms"
     ],
-    "description": "Delete room by id",
+    "description": "Delete room by id\n\nRequired scope - `gambit:erp:rooms`",
     "deprecated": false,
     "parameters": [
       {
@@ -11775,7 +11775,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "returns room information by id",
+    "description": "returns room information by id\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -11802,7 +11802,7 @@
     "scopes": [
       "gambit:static_data"
     ],
-    "description": "Searching rooms",
+    "description": "Searching rooms\n\nRequired scope - `gambit:static_data`",
     "deprecated": false,
     "parameters": [
       {
@@ -11861,7 +11861,7 @@
     "scopes": [
       "gambit:erp:rooms"
     ],
-    "description": "Update room information",
+    "description": "Update room information\n\nRequired scope - `gambit:erp:rooms`\n\nMethod does not support patching, so when field is not provided - it will overwrite existing data",
     "deprecated": false,
     "parameters": [
       {
@@ -11895,7 +11895,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -11917,7 +11917,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [
       {
@@ -11944,7 +11944,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -11966,7 +11966,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [
       {
@@ -11993,7 +11993,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -12008,7 +12008,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [
       {
@@ -12035,7 +12035,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [
       {
@@ -12069,7 +12069,7 @@
     "scopes": [
       "gambit:erp:salary-rules"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salary-rules`",
     "deprecated": false,
     "parameters": [
       {
@@ -12103,7 +12103,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Applies a sale material document by identifier.",
+    "description": "Applies a sale material document by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -12130,7 +12130,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a sale material document and optionally applies it immediately.",
+    "description": "Creates a sale material document and optionally applies it immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -12164,7 +12164,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Deletes a sale material document by identifier. Only non-applied documents can be deleted.",
+    "description": "Deletes a sale material document by identifier. Only non-applied documents can be deleted.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -12191,7 +12191,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -12218,7 +12218,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns sale material documents.",
+    "description": "Returns sale material documents.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -12256,7 +12256,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "Returns sale material documents linked to a specific patient.",
+    "description": "Returns sale material documents linked to a specific patient.\n\nRequired scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -12283,7 +12283,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Unapplies (reverses) a sale material document by identifier.",
+    "description": "Unapplies (reverses) a sale material document by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -12310,7 +12310,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Updates a sale material document.",
+    "description": "Updates a sale material document.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -12355,7 +12355,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -12404,7 +12404,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -12438,7 +12438,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -12465,7 +12465,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -12525,7 +12525,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -12563,7 +12563,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -12590,7 +12590,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -12650,7 +12650,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -12677,7 +12677,7 @@
     "scopes": [
       "gambit:erp:salepack"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:salepack`",
     "deprecated": false,
     "parameters": [
       {
@@ -12704,7 +12704,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -12742,7 +12742,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -12787,7 +12787,7 @@
     "scopes": [
       "gambit:erp:sales-invoice"
     ],
-    "description": "GetSalesInvoice",
+    "description": "GetSalesInvoice\n\nRequired scope - `gambit:erp:sales-invoice`",
     "deprecated": false,
     "parameters": [
       {
@@ -12814,7 +12814,7 @@
     "scopes": [
       "gambit:erp:sales-invoice"
     ],
-    "description": "GetSalesInvoice",
+    "description": "GetSalesInvoice\n\nRequired scope - `gambit:erp:sales-invoice`",
     "deprecated": false,
     "parameters": [
       {
@@ -12841,7 +12841,7 @@
     "scopes": [
       "gambit:erp:sales-invoice"
     ],
-    "description": "GetSalesInvoices",
+    "description": "GetSalesInvoices\n\nRequired scope - `gambit:erp:sales-invoice`",
     "deprecated": false,
     "parameters": [
       {
@@ -12879,7 +12879,7 @@
     "scopes": [
       "gambit:erp:sales-invoice"
     ],
-    "description": "GetSalesInvoice",
+    "description": "GetSalesInvoice\n\nRequired scope - `gambit:erp:sales-invoice`",
     "deprecated": false,
     "parameters": [
       {
@@ -12906,7 +12906,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -12933,7 +12933,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -12971,7 +12971,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -12997,7 +12997,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13057,7 +13057,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13128,7 +13128,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -13150,7 +13150,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -13172,7 +13172,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13210,7 +13210,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -13232,7 +13232,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13259,7 +13259,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13286,7 +13286,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13313,7 +13313,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13340,7 +13340,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13367,7 +13367,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13405,7 +13405,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13439,7 +13439,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -13466,7 +13466,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -13481,7 +13481,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Applies a transfer material document by identifier.",
+    "description": "Applies a transfer material document by identifier.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13508,7 +13508,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a transfer material document and optionally applies it immediately.",
+    "description": "Creates a transfer material document and optionally applies it immediately.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13542,7 +13542,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Deletes a transfer material document by identifier. Only non-applied documents can be deleted.",
+    "description": "Deletes a transfer material document by identifier. Only non-applied documents can be deleted.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13569,7 +13569,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13596,7 +13596,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13634,7 +13634,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Updates a transfer material document.",
+    "description": "Updates a transfer material document.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13679,7 +13679,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Creates a transfer order document.",
+    "description": "Creates a transfer order document.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -13701,7 +13701,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Soft-deletes a draft transfer order and its items. Confirmed orders cannot be deleted.",
+    "description": "Soft-deletes a draft transfer order and its items. Confirmed orders cannot be deleted.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13728,7 +13728,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13755,7 +13755,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -13793,7 +13793,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "Updates a transfer order document.",
+    "description": "Updates a transfer order document.\n\nRequired scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -13827,7 +13827,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -13849,7 +13849,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [
       {
@@ -13876,7 +13876,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [
       {
@@ -13903,7 +13903,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [
       {
@@ -13933,7 +13933,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -13948,7 +13948,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -13974,7 +13974,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [
       {
@@ -14001,7 +14001,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -14016,7 +14016,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -14031,7 +14031,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [
       {
@@ -14058,7 +14058,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [
       {
@@ -14088,7 +14088,7 @@
     "scopes": [
       "gambit:erp:type-doctors"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:type-doctors`",
     "deprecated": false,
     "parameters": [
       {
@@ -14122,7 +14122,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -14144,7 +14144,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -14182,7 +14182,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -14220,7 +14220,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -14235,7 +14235,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -14262,7 +14262,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -14289,7 +14289,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -14334,7 +14334,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -14356,7 +14356,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -14383,7 +14383,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -14398,7 +14398,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -14425,7 +14425,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [
       {
@@ -14452,7 +14452,7 @@
     "scopes": [
       "gambit:erp:material:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -14467,7 +14467,7 @@
     "scopes": [
       "gambit:erp:material:write"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:material:write`",
     "deprecated": false,
     "parameters": [
       {
@@ -14501,7 +14501,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14539,7 +14539,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -14573,7 +14573,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14611,7 +14611,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14654,7 +14654,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14681,7 +14681,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14708,7 +14708,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -14735,7 +14735,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14773,7 +14773,7 @@
     "scopes": [
       "gambit:public:user:read"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:public:user:read`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -14788,7 +14788,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14815,7 +14815,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14842,7 +14842,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14869,7 +14869,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -14884,7 +14884,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -14911,7 +14911,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -14938,7 +14938,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -14972,7 +14972,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15006,7 +15006,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15074,7 +15074,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -15096,7 +15096,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15134,7 +15134,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15168,7 +15168,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15202,7 +15202,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15236,7 +15236,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15274,7 +15274,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -15296,7 +15296,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15323,7 +15323,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15350,7 +15350,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -15365,7 +15365,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -15380,7 +15380,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15407,7 +15407,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15445,7 +15445,7 @@
     "scopes": [
       "gambit:erp:users"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp:users`",
     "deprecated": false,
     "parameters": [
       {
@@ -15479,7 +15479,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -15501,7 +15501,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15528,7 +15528,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -15543,7 +15543,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15570,7 +15570,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15604,7 +15604,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -15626,7 +15626,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15653,7 +15653,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15680,7 +15680,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -15695,7 +15695,7 @@
     "scopes": [
       "gambit:erp"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:erp`",
     "deprecated": false,
     "parameters": [
       {
@@ -15729,7 +15729,7 @@
     "scopes": [
       "gambit:webhooks"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:webhooks`\n\nTrigger types:\n\n - PrerecordCreated = 0 fire on prerecord creation\n\n - PrerecordDeleted = 1 fire on prerecord deletion\n\n - PrerecordUpdated = 2 fire on prerecord update\n\n - PatientCreated = 3 fire on patient creation\n\n - PatientUpdated = 4 fire on patient update\n\n - OrderAdded = 5 fire on order addition\n\n - OrderUpdated = 6 fire on order update\n\n - OrderDeleted = 7 fire on order deletion\n\n - Fiscalization = 8 fire on fiscalization\n\n - ProtocolUpdated = 9 fire on protocol update (when user presses Save button)\n\n - ReferralSalepackPackageCreated = 10 fire on referral salepack package creation\n\n - ReferralSalepackPackageDeleted = 11 fire on referral salepack package deletion\n\n - ReferralSalepackPackageUpdated = 12 fire on referral salepack package update\n\n - ProtocolDrugCreated = 13 fire on ERP protocol drug creation\n\n - ProtocolDrugDeleted = 14 fire on ERP protocol drug deletion\n\n - ProtocolDrugUpdated = 15 fire on ERP protocol drug update\n\n - ProtocolMonitoringAssignmentCreated = 16 fire on ERP monitoring assignment creation\n\n - ProtocolMonitoringAssignmentDeleted = 17 fire on ERP monitoring assignment deletion\n\n - ProtocolMonitoringAssignmentUpdated = 18 fire on ERP monitoring assignment update\n\nYou can specify secret token `SecretToken` to be used for webhook authentication, value will be passed in the `X-ClinicaWeb-Token` header.\n\nNote that after any changes in webhooks will be applied within 5 minutes.\n\nEndpoint returns the Id of the created webhook",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -15751,7 +15751,7 @@
     "scopes": [
       "gambit:webhooks"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:webhooks`",
     "deprecated": false,
     "parameters": [
       {
@@ -15778,7 +15778,7 @@
     "scopes": [
       "gambit:webhooks"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:webhooks`",
     "deprecated": false,
     "parameters": [
       {
@@ -15805,7 +15805,7 @@
     "scopes": [
       "gambit:webhooks"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:webhooks`",
     "deprecated": false,
     "parameters": [],
     "binary": false
@@ -15820,7 +15820,7 @@
     "scopes": [
       "gambit:webhooks"
     ],
-    "description": "webhook endpoint example",
+    "description": "webhook endpoint example\n\nRequired scope - `gambit:webhooks`\n\nThe webhook handlers should follow this endpoint example.\n\nThe application will send a `POST` request to the configured uri with the body of the request being the `WebhookUpdateEvent` object.\n\nNot every field in the `WebhookUpdateEvent` object will be populated, only the fields that are relevant to the trigger that caused the webhook to be called.\n\nIn case of triggers: \n\n - PrerecordCreated = 0\n\n - PrerecordDeleted = 1\n\n - PrerecordUpdated = 2\n\nfield 'Prerecord' will be populated, but other fields will be null.\n\nProtocolDrugCreated/Deleted/Updated populate 'ProtocolDrug' with the shared REST response, including\n'patientId', 'protocolId' and 'del'. ProtocolMonitoringAssignmentCreated/Deleted/Updated populate\n'ProtocolMonitoringAssignment', including 'PatientId', 'ProtocolId' and 'Del'. Deletion payloads include\nthe soft-deleted record. Unrelated payload fields are omitted.\n\nThese events are published after successful ERP mutations through the internal notification bus.\nLegacy drug add and OData mutations do not publish these events. Payloads contain the saved state\nwhen the background worker reads the record.\n\nIn case of any failures, application will try to send request **10** times with **1** seconds delay between each try.\n",
     "deprecated": false,
     "parameters": [],
     "body": {
@@ -15842,7 +15842,7 @@
     "scopes": [
       "gambit:webhooks"
     ],
-    "description": "",
+    "description": "Required scope - `gambit:webhooks`",
     "deprecated": false,
     "parameters": [
       {
